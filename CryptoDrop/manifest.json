@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Crypto Drop",
+  "description": "rack the latest crypto airdrops with ease! Get instant alerts and updates right in your browser with Crypto Drop",
+  "version": "1.0.0",
+  "permissions": [
+    "alarms",
+    "notifications",
+    "storage",
+    "tabs",
+    "cookies",
+    "system.display",
+    "management",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "scripts/background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Crypto Drop",
+    "default_popup": "./popup/popup.html",
+    "default_icon": {
+      "16": "./assets/images/icon.png",
+      "32": "./assets/images/icon.png",
+      "64": "./assets/images/icon.png"
+    }
+  },
+  "icons": {
+    "16": "./assets/images/icon.png",
+    "32": "./assets/images/icon.png",
+    "64": "./assets/images/icon.png",
+    "128": "./assets/images/icon.png"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "./rulsets/rulset.json"
+      }
+    ]
+  }
+}
