@@ -1,5 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@500;600&display=swap');
+
+:root {
+  --main-background-color: #385f71;
+  --text-color: #ffffff;
+  --background-hover: rgb(43, 65, 98);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Anek Kannada', sans-serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  height: 100%;
+  direction: ltr !important;
+}
+
+.wrapper {
+  width: 345px;
+  height: 460px;
+  background-color: var(--main-background-color);
 }
