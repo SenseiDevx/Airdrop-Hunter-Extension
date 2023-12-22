@@ -9,9 +9,26 @@
 </head>
 <body>
 <div class="wrapper">
-    <div id="upcoming"></div>
-    <div id="active"></div>
-    <div id="past"></div>
+    <div class="main-content">
+        <div class="header-block">
+            <img src="../assets/images/crypto-drop.png" alt="alt">
+        </div>
+        <div class="main-block">
+            <div class="name-of-types" id="buttons">
+                <button class="btn" id="latest-btn">LATEST AIRDROPS</button>
+                <button class="btn" id="hottest-btn">HOTTEST AIRDROPS</button>
+                <button class="btn" id="potential-btn">POTENTIAL AIRDROPS</button>
+            </div>
+            <div class="airdrop" id="airdrops">
+                <div id="latest" class="airdrops-section"></div>
+                <div id="hottest" class="airdrops-section" style="display: none;"></div>
+                <div id="potential" class="airdrops-section" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="about-content">
+
+    </div>
 </div>
 </body>
 <script src="popup.js"></script>

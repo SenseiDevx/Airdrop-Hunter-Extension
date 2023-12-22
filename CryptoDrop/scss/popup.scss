@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
 
 :root {
   --main-background-color: #385f71;
@@ -17,13 +17,97 @@ body {
   font-family: 'Anek Kannada', sans-serif;
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
-  background-color: #fff;
+  background-color: var(--main-background-color);
   height: 100%;
   direction: ltr !important;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #385f71;
 }
 
 .wrapper {
   width: 345px;
   height: 460px;
-  background-color: var(--main-background-color);
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    .header-block {
+      width: 310px;
+      height: 150px;
+      -webkit-box-shadow: 0 0 23px 15px rgba(34, 60, 80, 0.25);
+      -moz-box-shadow: 0 0 23px 15px rgba(34, 60, 80, 0.25);
+      box-shadow: 0 0 23px 15px rgba(34, 60, 80, 0.25);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .main-block {
+      padding: 20px;
+
+      .name-of-types {
+        display: flex;
+        justify-content: space-between;
+        width: 335px;
+        overflow-x: scroll;
+        padding: 5px;
+        align-items: center;
+
+        .btn {
+          font-family: 'Nunito', sans-serif;
+          display: inline-block;
+          box-sizing: border-box;
+          padding: 0 20px;
+          margin: 0 15px 15px 0;
+          outline: none;
+          border: none;
+          border-radius: 6px;
+          font-size: 17px;
+          font-weight: 600;
+          text-decoration: none;
+          color: #385898;
+          background-color: #e7f3ff;
+          cursor: pointer;
+          user-select: none;
+          appearance: none;
+          touch-action: manipulation;
+
+          &:focus-visible {
+            box-shadow: 0 0 0 2px #666;
+          }
+
+          &:hover {
+            background-color: #DBE7F2;
+          }
+
+          &:active {
+            transform: scale(0.96);
+          }
+
+          &:disabled {
+            pointer-events: none;
+            opacity: 0.65;
+          }
+        }
+      }
+
+      .airdrop {
+        display: flex;
+      }
+    }
+  }
 }
