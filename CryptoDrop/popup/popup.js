@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     fetch('../js/data.json')
         .then(response => response.json())
         .then(data => {
@@ -20,12 +20,16 @@ function displayAirdrops(sectionId, airdrops) {
             const adElement = document.createElement('div');
             adElement.classList.add('airdrop-section');
             adElement.innerHTML = `
-                <div class="airdrop-name">${ad.name}</div>
-                <div>${ad.description}</div>
-                <div>Price: ${ad.price ? ad.price + '$' : 'N/A'}</div>
-                <div>Start Date: ${ad.startDate}</div>
-                <div>End Date: ${ad.endDate}</div>
-            `;
+                <div class="card-block">
+                    <div class="airdrop-image">
+                        <img src="${ad.image}" alt="img"> 
+                    </div>
+                    <div class="airdrop-datas">
+                        <div class="airdrop-name">${ad.name}</div>
+                        <div>${ad.price ? ad.price + '$' : 'N/A'}</div>
+                    </div>
+                </div>
+                `;
             section.appendChild(adElement);
         });
     } else {

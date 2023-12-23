@@ -4,15 +4,15 @@
       "name": "latestAirdrops",
       "description": "Описание для ExampleLatest1",
       "price": "0.1",
-      "startDate": "2024-01-01",
-      "endDate": "2024-01-15"
+      "image": "https://airdrops.io/wp-content/uploads/2023/12/Grass-logo.jpg",
+      "icon": "../assets/icons/money.png"
     },
     {
       "name": "ExampleLatest2",
       "description": "Описание для ExampleLatest2",
       "price": "0.05",
-      "startDate": "2024-02-01",
-      "endDate": "2024-02-15"
+      "image": "https://airdrops.io/wp-content/uploads/2023/12/Grass-logo.jpg",
+      "icon": "../assets/icons/money.png"
     }
   ],
   "hottestAirdrops": [
@@ -20,15 +20,15 @@
       "name": "hottestAirdrops",
       "description": "Описание для ExampleHot1",
       "price": "0.2",
-      "startDate": "2023-12-01",
-      "endDate": "2023-12-31"
+      "image": "https://airdrops.io/wp-content/uploads/2023/12/Grass-logo.jpg",
+      "icon": "../assets/icons/money.png"
     },
     {
       "name": "ExampleHot2",
       "description": "Описание для ExampleHot2",
       "price": "0.15",
-      "startDate": "2023-11-10",
-      "endDate": "2023-11-30"
+      "image": "https://airdrops.io/wp-content/uploads/2023/12/Grass-logo.jpg",
+      "icon": "../assets/icons/money.png"
     }
   ],
   "potentialAirdrops": [
@@ -36,15 +36,15 @@
       "name": "potentialAirdrops",
       "description": "Описание для ExamplePotential1",
       "price": "0.07",
-      "startDate": "2023-10-01",
-      "endDate": "2023-10-15"
+      "image": "https://airdrops.io/wp-content/uploads/2023/12/Grass-logo.jpg",
+      "icon": "../assets/icons/money.png"
     },
     {
       "name": "ExamplePotential2",
       "description": "Описание для ExamplePotential2",
       "price": "0.03",
-      "startDate": "2023-09-20",
-      "endDate": "2023-10-05"
+      "image": "https://airdrops.io/wp-content/uploads/2023/12/Grass-logo.jpg",
+      "icon": "../assets/icons/money.png"
     }
   ]
 }
