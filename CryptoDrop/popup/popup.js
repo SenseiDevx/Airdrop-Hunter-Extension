@@ -24,10 +24,14 @@ function displayAirdrops(sectionId, airdrops) {
                     <div class="airdrop-image">
                         <img src="${ad.image}" alt="img"> 
                     </div>
-                    <div class="airdrop-datas">
-                        <div class="airdrop-name">${ad.name}</div>
-                        <div>${ad.price ? ad.price + '$' : 'N/A'}</div>
+                    <div class="airdrop-data">
+                        <h2 class="airdrop-name">${ad.name}</h2>
+                        <div class="airdrop-price">
+                            <img src="${ad.icon}" alt="img"> 
+                            <div class="price-text">${ad.price}</div>
+                        </div>
                     </div>
+                    <div class="airdrop-status">${ad.status}</div>
                 </div>
                 `;
             section.appendChild(adElement);

@@ -2,7 +2,10 @@
 :root {
   --main-background-color: #385f71;
   --text-color: #ffffff;
-  --background-hover: rgb(43, 65, 98);
+  --background-hover: rgb(187, 158, 81);
+  --card-background: rgba(103, 103, 103, 0.2);
+  --card-text-color: #131315;
+  --status-color: #00e0ff;
 }
 
 * {
@@ -18,16 +21,15 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: var(--main-background-color);
   height: 100%;
-  direction: ltr !important;
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 1px;
   background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  border-radius: 1px;
   background: transparent;
 }
 
@@ -146,6 +148,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 5px;
+  gap: 5px;
 }
 .wrapper .main-content .main-block .airdrop .airdrops-section {
   display: -webkit-box;
@@ -156,6 +160,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 15px;
+  overflow-y: scroll;
+  height: 310px;
 }
 .wrapper .main-content .main-block .airdrop .airdrops-section .card-block {
   display: -webkit-box;
@@ -165,6 +171,22 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
+  width: 320px;
+  -webkit-animation: changeWidth 8s ease-in-out infinite;
+          animation: changeWidth 8s ease-in-out infinite;
+  background: var(--card-background);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  position: relative;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block:hover {
+  background-color: var(--background-hover);
+  color: var(--text-color);
 }
 .wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-image {
   width: 80px;
@@ -177,4 +199,43 @@ body {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-data .airdrop-name {
+  font-family: "Nunito", sans-serif;
+  font-size: 25px;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-data .airdrop-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2px;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-data .airdrop-price img {
+  width: 18px;
+  height: 18px;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-data .airdrop-price .price-text {
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-status {
+  position: absolute;
+  top: 5px;
+  right: 2px;
+  background-color: var(--status-color);
+  padding: 5px;
+  border-radius: 5px;
 }
