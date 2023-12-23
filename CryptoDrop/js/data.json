@@ -272,33 +272,292 @@
   ],
   "hottestAirdrops": [
     {
-      "name": "hottestAirdrops",
-      "description": "Описание для ExampleHot1",
-      "price": "0.2",
-      "image": "https://airdrops.io/wp-content/uploads/2023/12/Grass-logo.jpg",
+      "id": 31,
+      "name": "Chirp",
+      "description": "Action: Sign up & run Grass",
+      "status": "STANDARD",
+      "price": "Value: n/a",
+      "image": "https://airdrops.io/wp-content/uploads/2023/10/Chirp-logo.jpg",
       "icon": "../assets/icons/money.png"
     },
     {
-      "name": "ExampleHot2",
-      "description": "Описание для ExampleHot2",
-      "price": "0.15",
-      "image": "https://airdrops.io/wp-content/uploads/2023/12/Grass-logo.jpg",
+      "id": 32,
+      "name": "edeXa",
+      "description": "Описание для ExampleLatest2",
+      "status": "FEATURED",
+      "price": "Value: n/a",
+      "image": "https://airdrops.io/wp-content/uploads/2023/12/edeXa-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 33,
+      "name": "Swell",
+      "description": "Описание для ExampleLatest1",
+      "status": "STANDARD",
+      "price": "Value: n/a",
+      "image": "https://airdrops.io/wp-content/uploads/2023/06/Swell-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 34,
+      "name": "Frame",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Value: n/a",
+      "image": "https://airdrops.io/wp-content/uploads/2023/12/Frame-logo.png",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 35,
+      "name": "TeleportDAO",
+      "description": "Описание для ExampleLatest1",
+      "status": "FEATURED",
+      "price": "Value: n/a",
+      "image": "https://airdrops.io/wp-content/uploads/2023/12/TeleportDAO-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 36,
+      "name": "Seamless Protocol",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Value: n/a",
+      "image": "https://airdrops.io/wp-content/uploads/2023/12/Seamless-Protocol-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 37,
+      "name": "Blast",
+      "description": "Описание для ExampleLatest2",
+      "status": "CONFIRMED",
+      "price": "Action: Bridge ETH",
+      "image": "https://airdrops.io/wp-content/uploads/2023/11/Blast-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 38,
+      "name": "BRC20",
+      "description": "Описание для ExampleLatest2",
+      "status": "FEATURED",
+      "price": "Value: n/a",
+      "image": "https://airdrops.io/wp-content/uploads/2023/12/BRC20-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 39,
+      "name": "Meuna",
+      "description": "Описание для ExampleLatest2",
+      "status": "CONFIRMED",
+      "price": "Action: Make trades",
+      "image": "https://airdrops.io/wp-content/uploads/2023/09/Meuna-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 40,
+      "name": "Kinza Finance",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Value: n/a",
+      "image": "https://airdrops.io/wp-content/uploads/2023/08/Kinza-Finance-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 41,
+      "name": "Elusiv",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Action: Send tokens privately",
+      "image": "https://airdrops.io/wp-content/uploads/2023/12/Elusiv-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 42,
+      "name": "Kamino",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Action: Stake tokens",
+      "image": "https://airdrops.io/wp-content/uploads/2023/12/Kamino-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 43,
+      "name": "Phoenix",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Action: Make trades",
+      "image": "https://airdrops.io/wp-content/uploads/2023/12/Phoenix-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 44,
+      "name": "Namada",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Value: n/a",
+      "image": "https://airdrops.io/wp-content/uploads/2023/12/Namada-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 45,
+      "name": "Marinade",
+      "description": "Описание для ExampleLatest2",
+      "status": "CONFIRMED",
+      "price": "Action: Stake SOL",
+      "image": "https://airdrops.io/wp-content/uploads/2021/10/Marinade-logo.png",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 46,
+      "name": "Jito",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Value: n/a",
+      "image": "https://airdrops.io/wp-content/uploads/2023/12/Jito-logo.png",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 47,
+      "name": "Term Structure",
+      "description": "Описание для ExampleLatest2",
+      "price": "Action: Complete testnet actions",
+      "image": "https://airdrops.io/wp-content/uploads/2023/12/Term-Structure-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 48,
+      "name": "CEX.IO",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Value: n/a",
+      "image": "https://airdrops.io/wp-content/uploads/2021/06/CEX.IO-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 49,
+      "name": "Affine",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Action: Stake, Lend or Trade",
+      "image": "https://airdrops.io/wp-content/uploads/2023/08/Affine-logo.png",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 50,
+      "name": "Lingo",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Value: n/a",
+      "image": "https://airdrops.io/wp-content/uploads/2023/11/Lingo-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 51,
+      "name": "NovaDEX",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Action: Make swaps & Provide LP",
+      "image": "https://airdrops.io/wp-content/uploads/2023/11/NovaDEX-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 52,
+      "name": "Futureverse",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Value: n/a",
+      "image": "https://airdrops.io/wp-content/uploads/2023/11/Futureverse-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 53,
+      "name": "SynFutures",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Action: Make trades",
+      "image": "https://airdrops.io/wp-content/uploads/2023/10/6XYi7XLb_400x400.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 54,
+      "name": "Script Network",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Value: n/a",
+      "image": "https://airdrops.io/wp-content/uploads/2023/02/Script-Network-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 55,
+      "name": "Hinkal",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Action: Deposit, swap, stake etc",
+      "image": "https://airdrops.io/wp-content/uploads/2023/11/Hinkal-logo.png",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 56,
+      "name": "Patex",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Action: Use the bridge",
+      "image": "https://airdrops.io/wp-content/uploads/2023/11/Patex-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 57,
+      "name": "Pyth Network",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Value: n/a",
+      "image": "https://airdrops.io/wp-content/uploads/2023/11/Lingo-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 58,
+      "name": "Undeads",
+      "description": "Описание для ExampleLatest2",
+      "status": "FEATURED",
+      "price": "Value: n/a",
+      "image": "https://airdrops.io/wp-content/uploads/2023/11/Undeads-logo.jpg",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 59,
+      "name": "Base Name Service",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Action: Buy a domain",
+      "image": "https://airdrops.io/wp-content/uploads/2023/11/Base-Name-Service-logo.png",
+      "icon": "../assets/icons/money.png"
+    },
+    {
+      "id": 60,
+      "name": "inceptionLRT",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Action: Do testnet actions",
+      "image": "https://airdrops.io/wp-content/uploads/2023/10/InceptionLRT-logo.png",
       "icon": "../assets/icons/money.png"
     }
   ],
   "potentialAirdrops": [
     {
-      "name": "potentialAirdrops",
-      "description": "Описание для ExamplePotential1",
-      "price": "0.07",
-      "image": "https://airdrops.io/wp-content/uploads/2023/12/Grass-logo.jpg",
+      "id": 61,
+      "name": "inceptionLRT",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Action: Do testnet actions",
+      "image": "https://airdrops.io/wp-content/uploads/2023/10/InceptionLRT-logo.png",
       "icon": "../assets/icons/money.png"
     },
     {
-      "name": "ExamplePotential2",
-      "description": "Описание для ExamplePotential2",
-      "price": "0.03",
-      "image": "https://airdrops.io/wp-content/uploads/2023/12/Grass-logo.jpg",
+      "id": 62,
+      "name": "inceptionLRT",
+      "description": "Описание для ExampleLatest2",
+      "status": "STANDARD",
+      "price": "Action: Do testnet actions",
+      "image": "https://airdrops.io/wp-content/uploads/2023/10/InceptionLRT-logo.png",
       "icon": "../assets/icons/money.png"
     }
   ]

@@ -20,7 +20,7 @@ function displayAirdrops(sectionId, airdrops) {
             const adElement = document.createElement('div');
             adElement.classList.add('airdrop-section');
             adElement.innerHTML = `
-                <div class="card-block">
+                <div class="card-block" data-ad-id="${ad.id}">
                     <div class="airdrop-image">
                         <img src="${ad.image}" alt="img"> 
                     </div>
@@ -35,6 +35,9 @@ function displayAirdrops(sectionId, airdrops) {
                 </div>
                 `;
             section.appendChild(adElement);
+            adElement.addEventListener('click', function() {
+                showAboutPage(ad.id);
+            });
         });
     } else {
         section.innerHTML = `<div>No ${sectionId} airdrops found.</div>`;
@@ -48,3 +51,35 @@ function toggleAirdrops(sectionId) {
 
     document.getElementById(sectionId).style.display = 'block';
 }
+
+
+let allAirdrops;
+function showAboutPage(adId) {
+    const airdrop = allAirdrops.find(ad => ad.id === adId);
+
+    if (airdrop) {
+        const aboutContent = document.querySelector('.about-content');
+        aboutContent.innerHTML = `
+            <div class="about-airdrop">
+                <img src="${airdrop.image}" alt="${airdrop.name}" class="about-airdrop-image">
+                <h2 class="about-airdrop-name">${airdrop.name}</h2>
+                <p class="about-airdrop-description">${airdrop.description}</p>
+                <p class="about-airdrop-status">Status: ${airdrop.status}</p>
+                <p class="about-airdrop-price">${airdrop.price}</p>
+            </div>
+        `;
+        aboutContent.style.display = 'block';
+    } else {
+        console.error('Airdrop с таким ID не найден:', adId);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    fetch('../js/data.json')
+        .then(response => response.json())
+        .then(data => {
+            allAirdrops = [...data.latestAirdrops, ...data.hottestAirdrops, ...data.potentialAirdrops];
+        })
+        .catch(error => console.error('Ошибка при загрузке airdrops:', error));
+    // Остальная часть кода
+});
