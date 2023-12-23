@@ -7,7 +7,13 @@
       "status": "STANDARD",
       "price": "Action: Sign up & run Grass",
       "image": "https://airdrops.io/wp-content/uploads/2023/12/Grass-logo.jpg",
-      "icon": "../assets/icons/money.png"
+      "icon": "../assets/icons/money.png",
+      "airdropLink": "https://app.getgrass.io/register?referralCode=44rUL4nQN8RN0YV",
+      "airdropLinkIcon": "../assets/icons/enterIcon.png",
+      "totalValue": "n/a",
+      "totalValueIcon": "../assets/icons/price.png",
+      "platform": "Own chain",
+      "platformIcon": "../assets/icons/monitor.png"
     },
     {
       "id": 2,

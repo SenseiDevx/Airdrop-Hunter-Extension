@@ -54,7 +54,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px;
-  gap: 10px;
 }
 .wrapper .main-content .header-block {
   display: -webkit-box;
@@ -71,6 +70,7 @@ body {
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   border-radius: 8px;
+  margin-bottom: 10px;
 }
 .wrapper .main-content .header-block img {
   width: 120px;
@@ -239,6 +239,12 @@ body {
   padding: 5px;
   border-radius: 5px;
 }
-.wrapper .about-content .back-btn {
-  z-index: 555;
+.wrapper .about-content {
+  -webkit-animation: changeWidth 8s ease-in-out infinite;
+          animation: changeWidth 8s ease-in-out infinite;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border-radius: 8px;
+  height: 100vh;
 }
