@@ -239,3 +239,6 @@ body {
   padding: 5px;
   border-radius: 5px;
 }
+.wrapper .about-content .back-btn {
+  z-index: 555;
+}

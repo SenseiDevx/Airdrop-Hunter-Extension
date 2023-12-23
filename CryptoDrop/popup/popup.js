@@ -58,21 +58,34 @@ function showAboutPage(adId) {
     const airdrop = allAirdrops.find(ad => ad.id === adId);
 
     if (airdrop) {
+        const mainContent = document.querySelector('.main-content');
         const aboutContent = document.querySelector('.about-content');
+        const backButton = document.createElement('button');
+        backButton.textContent = 'Назад';
+        backButton.id = 'back-btn';
+
+        backButton.addEventListener('click', function() {
+            mainContent.style.display = 'block';
+            aboutContent.style.display = 'none';
+        });
+
         aboutContent.innerHTML = `
             <div class="about-airdrop">
-                <img src="${airdrop.image}" alt="${airdrop.name}" class="about-airdrop-image">
                 <h2 class="about-airdrop-name">${airdrop.name}</h2>
                 <p class="about-airdrop-description">${airdrop.description}</p>
                 <p class="about-airdrop-status">Status: ${airdrop.status}</p>
                 <p class="about-airdrop-price">${airdrop.price}</p>
             </div>
         `;
+        aboutContent.appendChild(backButton);
+
+        mainContent.style.display = 'none';
         aboutContent.style.display = 'block';
     } else {
         console.error('Airdrop с таким ID не найден:', adId);
     }
 }
+
 
 document.addEventListener('DOMContentLoaded', function () {
     fetch('../js/data.json')
@@ -81,5 +94,4 @@ document.addEventListener('DOMContentLoaded', function () {
             allAirdrops = [...data.latestAirdrops, ...data.hottestAirdrops, ...data.potentialAirdrops];
         })
         .catch(error => console.error('Ошибка при загрузке airdrops:', error));
-    // Остальная часть кода
 });
