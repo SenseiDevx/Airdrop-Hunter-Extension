@@ -22,7 +22,7 @@ function displayAirdrops(sectionId, airdrops) {
             adElement.innerHTML = `
                 <div class="card-block" data-ad-id="${ad.id}">
                     <div class="airdrop-image">
-                        <img src="${ad.image}" alt="img"> 
+                        <img src="${ad.image}" alt="${ad.name}"> 
                     </div>
                     <div class="airdrop-data">
                         <h2 class="airdrop-name">${ad.name}</h2>
@@ -69,12 +69,18 @@ function showAboutPage(adId) {
             aboutContent.style.display = 'none';
         });
 
-        aboutContent.innerHTML = `
+        aboutContent.innerHTML = `    
             <div class="about-airdrop">
-                <h2 class="about-airdrop-name">${airdrop.name}</h2>
-                <p class="about-airdrop-description">${airdrop.description}</p>
-                <p class="about-airdrop-status">Status: ${airdrop.status}</p>
-                <p class="about-airdrop-price">${airdrop.price}</p>
+                <div class="about-airdrop-image">
+                    <img class="image" src="${airdrop.image}" alt="${airdrop.name}"> 
+                </div>
+                <div class="airdrop-about-data">
+                    <h2 class="about-airdrop-name">${airdrop.name}</h2>
+                    <p class="about-airdrop-description">${airdrop.description}</p>
+                    <p class="about-airdrop-status">Status: ${airdrop.status}</p>
+                    <p class="about-airdrop-price">${airdrop.price}</p>
+                    <p class="about-airdrop-price">${airdrop.platform}</p>
+                </div>
             </div>
         `;
         aboutContent.appendChild(backButton);
