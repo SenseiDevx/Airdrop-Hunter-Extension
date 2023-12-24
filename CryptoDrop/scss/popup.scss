@@ -37,7 +37,7 @@ body {
 }
 
 .wrapper {
-  width: 345px;
+  width: 410px;
   background-image: url("../assets/images/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -48,29 +48,51 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 15px;
 
     .header-block {
       display: flex;
-      gap: 10px;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
       align-items: center;
       padding: 10px;
       animation: changeWidth 8s ease-in-out infinite;
       background: rgba(255, 255, 255, 0.2);
       backdrop-filter: blur(8px);
       border-radius: 8px;
-      margin-bottom: 10px;
+      width: 100%;
+      margin-bottom: 7px;
+
 
       img {
         width: 120px;
         height: 120px;
-
       }
 
       h1 {
         font-family: 'Nunito', sans-serif;
         color: var(--text-color);
-        font-size: 25px;
+        font-size: 35px;
+      }
+
+      .airdrop-input {
+        input {
+          outline: none;
+          padding: 5px;
+          background-color: var(--main-background-color);
+          color: var(--text-color);
+          font-family: "Nunito", sans-serif;
+          font-size: 18px;
+          border: none;
+          border-radius: 5px;
+        }
+
+        input::placeholder {
+          font-family: "Nunito", sans-serif;
+          color: var(--text-color);
+          opacity: 1;
+        }
       }
     }
 
@@ -79,11 +101,12 @@ body {
       background: rgba(255, 255, 255, 0.2);
       backdrop-filter: blur(8px);
       border-radius: 8px;
+      width: 100%;
 
       .name-of-types {
         display: flex;
         justify-content: space-between;
-        width: 310px;
+        width: 100%;
         overflow-x: scroll;
         padding: 5px;
         align-items: center;
@@ -129,20 +152,20 @@ body {
       .airdrop {
         display: flex;
         padding: 5px;
-        gap: 5px;
+        width: 100%;
 
         .airdrops-section {
           display: flex;
           flex-direction: column;
-          gap: 15px;
           overflow-y: scroll;
-          height: 310px;
+          height: 271px;
+          width: 100%;
 
           .card-block {
             display: flex;
             align-items: center;
             gap: 20px;
-            width: 320px;
+            width: 100%;
             animation: changeWidth 8s ease-in-out infinite;
             background: var(--card-background);
             backdrop-filter: blur(8px);
@@ -151,6 +174,7 @@ body {
             cursor: pointer;
             transition: 0.4s;
             position: relative;
+            margin-bottom: 10px;
 
             &:hover {
               background-color: var(--background-hover);
@@ -216,6 +240,47 @@ body {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(8px);
     border-radius: 8px;
+
+    .back-btn {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 0 20px;
+      margin: 0 15px 15px 0;
+      outline: none;
+      border: none;
+      border-radius: 6px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 17px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #385898;
+      background-color: #e7f3ff;
+      cursor: pointer;
+      user-select: none;
+      appearance: none;
+      touch-action: manipulation;
+
+      &:focus-visible {
+        box-shadow: 0 0 0 2px #666;
+      }
+
+      &:hover {
+        background-color: #DBE7F2;
+      }
+
+      &:active {
+        transform: scale(0.96);
+      }
+
+      &:disabled {
+        pointer-events: none;
+        opacity: 0.65;
+      }
+    }
 
     .about-airdrop {
       display: flex;
@@ -317,9 +382,12 @@ body {
         .airdrop-button {
           display: inline-block;
           box-sizing: border-box;
+          justify-content: center;
           padding: 0 24px;
-          margin: 0 15px 15px 0;
+          width: 100%;
           outline: none;
+          margin-top: 10px;
+          margin-bottom: 10px;
           border: none;
           border-radius: 3px;
           height: 37px;
@@ -334,16 +402,19 @@ body {
           user-select: none;
           appearance: none;
           touch-action: manipulation;
-          transition: box-shadow .18s ease-out,background .18s ease-out,color .18s ease-out;
-        }
-        .airdrop-button:focus-visible {
-          box-shadow: 0 0 0 3px lightskyblue;
-        }
-        .airdrop-button:hover {
-          box-shadow: 0 1px 1px 0  #cfcfcf, 0 2px 5px 0  #cfcfcf;
-        }
-        .airdrop-button:active {
-          background-color: #efefef !important;
+          transition: box-shadow .18s ease-out, background .18s ease-out, color .18s ease-out;
+
+          &:focus-visible {
+            box-shadow: 0 0 0 3px lightskyblue;
+          }
+
+          &:hover {
+            box-shadow: 0 1px 1px 0 #cfcfcf, 0 2px 5px 0 #cfcfcf;
+          }
+
+          &:active {
+            background-color: #efefef !important;
+          }
         }
       }
     }

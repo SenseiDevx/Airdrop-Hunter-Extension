@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('potential-btn').addEventListener('click', () => toggleAirdrops('potential'));
 });
 
+
 function displayAirdrops(sectionId, airdrops) {
     const section = document.getElementById(sectionId);
     if (section && airdrops.length > 0) {
@@ -62,11 +63,10 @@ function showAboutPage(adId) {
         const mainContent = document.querySelector('.main-content');
         const aboutContent = document.querySelector('.about-content');
         const backButton = document.createElement('button');
-        const openPage = document.createElement('button')
-        backButton.textContent = 'Назад';
+        backButton.textContent = 'Back';
         backButton.id = 'back-btn';
 
-        openPage.textContent = 'CLAIM AIRDROP'
+        backButton.classList.add('back-btn');
 
         backButton.addEventListener('click', function () {
             mainContent.style.display = 'block';
@@ -88,7 +88,7 @@ function showAboutPage(adId) {
                 <div class="airdrop-about-data">
                     <div class="airdrop-inform">
                         <img src="${airdrop.airdropLinkIcon}" alt="link">
-                        <p class="p">Airdrop Link: <a href="${airdrop.airdropLink}">Go to airdrop</a></p>
+                        <p class="p">Airdrop Link: <a href="${airdrop.airdropLink}" target="_blank">Go to airdrop</a></p>
                     </div>
                     <div class="airdrop-inform">
                         <img src="${airdrop.totalValueIcon}" alt="link">
@@ -123,7 +123,6 @@ function showAboutPage(adId) {
         console.error('Airdrop с таким ID не найден:', adId);
     }
 }
-
 
 document.addEventListener('DOMContentLoaded', function () {
     fetch('../js/data.json')
