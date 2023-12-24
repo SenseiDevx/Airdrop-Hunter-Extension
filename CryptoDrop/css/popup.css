@@ -41,7 +41,6 @@ body {
   background-position: center;
   background-size: cover;
   height: 100vh;
-  background-attachment: fixed;
 }
 .wrapper .main-content {
   display: -webkit-box;
@@ -247,7 +246,6 @@ body {
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   border-radius: 8px;
-  height: 100vh;
 }
 .wrapper .about-content .about-airdrop {
   display: -webkit-box;
@@ -261,6 +259,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px;
+  height: 100vh;
 }
 .wrapper .about-content .about-airdrop .about-airdrop-image {
   width: 150px;
