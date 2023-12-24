@@ -35,7 +35,7 @@ function displayAirdrops(sectionId, airdrops) {
                 </div>
                 `;
             section.appendChild(adElement);
-            adElement.addEventListener('click', function() {
+            adElement.addEventListener('click', function () {
                 showAboutPage(ad.id);
             });
         });
@@ -54,6 +54,7 @@ function toggleAirdrops(sectionId) {
 
 
 let allAirdrops;
+
 function showAboutPage(adId) {
     const airdrop = allAirdrops.find(ad => ad.id === adId);
 
@@ -61,28 +62,59 @@ function showAboutPage(adId) {
         const mainContent = document.querySelector('.main-content');
         const aboutContent = document.querySelector('.about-content');
         const backButton = document.createElement('button');
+        const openPage = document.createElement('button')
         backButton.textContent = 'Назад';
         backButton.id = 'back-btn';
 
-        backButton.addEventListener('click', function() {
+        openPage.textContent = 'CLAIM AIRDROP'
+
+        backButton.addEventListener('click', function () {
             mainContent.style.display = 'block';
             aboutContent.style.display = 'none';
         });
+
+        let guidesHtml = '<ol class="guides-list">';
+        airdrop.stepByStepGuide.forEach(guide => {
+            guidesHtml += `<li>${guide}</li>`;
+        });
+        guidesHtml += '</ol>';
 
         aboutContent.innerHTML = `    
             <div class="about-airdrop">
                 <div class="about-airdrop-image">
                     <img class="image" src="${airdrop.image}" alt="${airdrop.name}"> 
                 </div>
+                <h2 class="about-airdrop-name">${airdrop.name}</h2>
                 <div class="airdrop-about-data">
-                    <h2 class="about-airdrop-name">${airdrop.name}</h2>
-                    <p class="about-airdrop-description">${airdrop.description}</p>
-                    <p class="about-airdrop-status">Status: ${airdrop.status}</p>
-                    <p class="about-airdrop-price">${airdrop.price}</p>
-                    <p class="about-airdrop-price">${airdrop.platform}</p>
+                    <div class="airdrop-inform">
+                        <img src="${airdrop.airdropLinkIcon}" alt="link">
+                        <p class="p">Airdrop Link: <a href="${airdrop.airdropLink}">Go to airdrop</a></p>
+                    </div>
+                    <div class="airdrop-inform">
+                        <img src="${airdrop.totalValueIcon}" alt="link">
+                        <p class="p">Total value: ${airdrop.totalValue}</p>
+                    </div>
+                    <div class="airdrop-inform">
+                        <img src="${airdrop.platformIcon}" alt="link">
+                        <p class="p">Platform: ${airdrop.platform}</p>
+                    </div>
+                </div>
+                <div class="airdrop-about-description">
+                    <div class="airdrop-descriptions">
+                        <p class="airdrop-p">${airdrop.description}</p>
+                        <p class="airdrop-p">${airdrop.description2}</p>
+                    </div>
+                    <div class="step-by-step">
+                        <h3 class="h3">Step-by-Step Guide:</h3>
+                        ${guidesHtml}
+                    </div>
+                    <a href="${airdrop.airdropLink}" target="_blank">
+                        <button class="airdrop-button" id="openPage">CLAIM AIRDROP</button>
+                    </a>
                 </div>
             </div>
         `;
+
         aboutContent.appendChild(backButton);
 
         mainContent.style.display = 'none';

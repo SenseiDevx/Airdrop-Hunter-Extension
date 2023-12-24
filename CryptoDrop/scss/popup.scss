@@ -7,7 +7,9 @@
   --card-background: rgba(103, 103, 103, 0.2);
   --card-text-color: #131315;
   --status-color: #00e0ff;
-  --border-solid-color: #00ff76
+  --border-solid-color: #00ff76;
+  --description-text-color: #0c1533;
+  --list-color: #000000;
 }
 
 * {
@@ -223,8 +225,8 @@ body {
       height: 100vh;
 
       .about-airdrop-image {
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
 
         .image {
@@ -235,15 +237,113 @@ body {
         }
       }
 
+      .about-airdrop-name {
+        font-family: "Nunito", sans-serif;
+        color: var(--text-color);
+        font-size: 35px;
+      }
+
       .airdrop-about-data {
         display: flex;
         flex-direction: column;
         align-items: start;
+        animation: changeWidth 8s ease-in-out infinite;
+        background: rgba(0, 105, 255, 0.2);
+        backdrop-filter: blur(50px);
+        border-radius: 8px;
+        padding: 15px;
 
-        .about-airdrop-name {
-          font-family: "Nunito", sans-serif;
-          color: var(--text-color);
-          font-size: 35px;
+        .airdrop-inform {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          img {
+            width: 15px;
+            height: 15px;
+          }
+
+          .p {
+            font-family: "Nunito", sans-serif;
+            font-size: 19px;
+            color: var(--text-color);
+
+            a {
+              font-family: "Nunito", sans-serif;
+              font-size: 19px;
+              color: #0051ff;
+            }
+          }
+        }
+      }
+
+      .airdrop-about-description {
+        padding: 10px;
+        margin-top: 15px;
+        height: 300px;
+        overflow-y: scroll;
+        animation: changeWidth 8s ease-in-out infinite;
+        background: rgba(0, 105, 255, 0.2);
+        backdrop-filter: blur(50px);
+        border-radius: 8px;
+
+        .airdrop-descriptions {
+          display: flex;
+          flex-direction: column;
+
+          .airdrop-p {
+            font-family: "Nunito", sans-serif;
+            font-size: 18px;
+            color: var(--description-text-color);
+            padding-bottom: 10px;
+          }
+        }
+
+        .step-by-step {
+          .h3 {
+            font-family: "Nunito", sans-serif;
+            color: var(--card-text-color);
+            font-size: 17px;
+          }
+
+          ol {
+            font-family: "Nunito", sans-serif;
+            color: var(--list-color);
+            font-size: 16px;
+            padding-left: 17px;
+          }
+        }
+
+        .airdrop-button {
+          display: inline-block;
+          box-sizing: border-box;
+          padding: 0 24px;
+          margin: 0 15px 15px 0;
+          outline: none;
+          border: none;
+          border-radius: 3px;
+          height: 37px;
+          line-height: 37px;
+          font-size: 14px;
+          text-transform: uppercase;
+          font-weight: normal;
+          text-decoration: none;
+          color: #07bc4c;
+          background-color: #fff;
+          cursor: pointer;
+          user-select: none;
+          appearance: none;
+          touch-action: manipulation;
+          transition: box-shadow .18s ease-out,background .18s ease-out,color .18s ease-out;
+        }
+        .airdrop-button:focus-visible {
+          box-shadow: 0 0 0 3px lightskyblue;
+        }
+        .airdrop-button:hover {
+          box-shadow: 0 1px 1px 0  #cfcfcf, 0 2px 5px 0  #cfcfcf;
+        }
+        .airdrop-button:active {
+          background-color: #efefef !important;
         }
       }
     }

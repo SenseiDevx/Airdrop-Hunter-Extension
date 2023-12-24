@@ -3,7 +3,8 @@
     {
       "id": 1,
       "name": "Grass",
-      "description": "Action: Sign up & run Grass",
+      "description": "Grass is a network sharing application that allows users to sell their unused bandwidth. Where existing networks are operated by exploitative middlemen who extract value from the parties exchanging resources, Grass is an equitable solution in which both sides have an active stake in the network.",
+      "description2": "Grass has raised a total of $4.5M from investors like Polychain Capital & Tribe Capital and has confirmed to launch a governance token in the future. They’ve introduced a points system in which those who sign up, install the extension and run Grass will earn points. Also get 20% of the referred friends’ points, 10% from the secondary referee’s points and 5% from tertiary referees’ points.",
       "status": "STANDARD",
       "price": "Action: Sign up & run Grass",
       "image": "https://airdrops.io/wp-content/uploads/2023/12/Grass-logo.jpg",
@@ -13,7 +14,20 @@
       "totalValue": "n/a",
       "totalValueIcon": "../assets/icons/price.png",
       "platform": "Own chain",
-      "platformIcon": "../assets/icons/monitor.png"
+      "platformIcon": "../assets/icons/monitor.png",
+      "stepByStepGuide": [
+        "Visit the Grass registration page with the link below",
+        "Submit your details and sign up.",
+        "You will need an invite code to be able to sign up so make sure to sign up using the above link.",
+        "Now login and click on “Connect” to download their extension.",
+        "Install the extension and log in with the same credentials.",
+        "Once you are connected, you will start earning Grass points.",
+        "You will earn points while browsing the internet.",
+        "Grass enables you to earn passive income by selling your unused bandwidth while keeping your privacy intact.",
+        "Also get 20% of the referred friends’ points, 10% from the secondary referee’s points and 5% from tertiary referees’ points.",
+        "They’ve confirmed to launch a governance token in the future so the users who earn points may be able to convert the points into their tokens when the token goes live.",
+        "Please note that there is no guarantee that they will do an airdrop. It’s only speculation."
+      ]
     },
     {
       "id": 2,
