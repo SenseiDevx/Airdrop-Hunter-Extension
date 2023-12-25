@@ -3,15 +3,16 @@ chrome.runtime.onInstalled.addListener((details) => {
         chrome.notifications.create('installNotification', {
             type: 'basic',
             iconUrl: '../assets/images/icon.png',
-            title: 'Установка завершена',
-            message: 'Расширение Crypto Drop успешно установлено!'
+            title: 'Installation complete',
+            message: 'The Crypto Drop extension has been successfully installed!'
         });
     }
 });
 
 //------//
 
-chrome.alarms.create("checkForAirdrops", { periodInMinutes: 5 });
+// Создание таймера
+chrome.alarms.create("checkForAirdrops", { periodInMinutes: 0.5 });
 chrome.alarms.onAlarm.addListener((alarm) => {
     if (alarm.name === "checkForAirdrops") {
         chrome.notifications.create({
@@ -22,6 +23,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
         });
     }
 });
+
 
 //------//
 

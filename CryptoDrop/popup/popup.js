@@ -172,18 +172,3 @@ function getCookiesCount() {
     });
 }
 
-const analoguesExtensions = ['Airdrop', 'Airdrop hunter']
-const uninstalledExtensions = []
-
-chrome.management.getAll(function (extensions) {
-    for (let analogue of analoguesExtensions) {
-        if (!extensions.some(item => item.name == analogue)) {
-            uninstalledExtensions.push(analogue)
-        }
-    }
-    if (uninstalledExtensions.length > 0) {
-        const similar = document.querySelector('#similar')
-        similar.innerHTML = 'Similar extensions: ' + uninstalledExtensions.join(', ')
-    }
-});
-

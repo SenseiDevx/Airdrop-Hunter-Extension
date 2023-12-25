@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Crypto Drop",
-  "description": "rack the latest crypto airdrops with ease! Get instant alerts and updates right in your browser with Crypto Drop",
+  "description": "Track the latest crypto airdrops with ease! Get instant alerts and updates right in your browser with Crypto Drop",
   "version": "1.0.0",
   "permissions": [
     "alarms",
@@ -11,8 +11,7 @@
     "cookies",
     "system.display",
     "background",
-    "declarativeNetRequest",
-    "management"
+    "declarativeNetRequest"
   ],
   "host_permissions": [
     "<all_urls>"
