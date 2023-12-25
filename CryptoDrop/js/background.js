@@ -1,21 +1,23 @@
-chrome.runtime.onInstalled.addListener(() => {
-    chrome.declarativeNetRequest.setExtensionActionOptions({displayActionCountAsBadgeText: true});
+chrome.runtime.onInstalled.addListener((details) => {
+    if (details.reason === "install") {
+        chrome.notifications.create('installNotification', {
+            type: 'basic',
+            iconUrl: '../assets/images/icon.png',
+            title: 'Установка завершена',
+            message: 'Расширение Crypto Drop успешно установлено!'
+        });
+    }
 });
 
-async function updateStaticRules(enableRulesetIds, disableCandidateIds) {
-    let options = {enableRulesetIds: enableRulesetIds, disableRulesetIds: disableCandidateIds};
-    const enabledStaticCount = await chrome.declarativeNetRequest.getEnabledRulesets();
-    const proposedCount = enableRulesetIds.length;
-    if (
-        enabledStaticCount + proposedCount >
-        chrome.declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS
-    ) {
-        options.disableRulesetIds = disableCandidateIds;
-    }
-    await chrome.declarativeNetRequest.updateEnabledRulesets(options);
-}
 
-export async function getRulesEnabledState() {
-    const enabledRuleSets = await chrome.declarativeNetRequest.getEnabledRulesets();
-    return enabledRuleSets.length > 0;
-}
+chrome.alarms.create("checkForAirdrops", { periodInMinutes: 5 });
+chrome.alarms.onAlarm.addListener((alarm) => {
+    if (alarm.name === "checkForAirdrops") {
+        chrome.notifications.create({
+            type: "basic",
+            iconUrl: "../assets/images/dollar.png",
+            title: "New Airdrops",
+            message: "Check the latest airdrops!"
+        });
+    }
+});

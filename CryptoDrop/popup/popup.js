@@ -8,13 +8,17 @@ document.addEventListener('DOMContentLoaded', function () {
             displayAirdrops(allAirdrops);
 
             const searchInput = document.querySelector('.input');
-            searchInput.addEventListener('input', function() {
+            searchInput.addEventListener('input', function () {
                 const searchText = searchInput.value.toLowerCase();
                 filterAirdrops(searchText);
             });
+
+            listenForDisplayChanges();
         })
         .catch(error => console.error('Ошибка при загрузке airdrops:', error));
+    getCookiesCount()
 });
+
 
 function filterAirdrops(searchText) {
     const filteredAirdrops = allAirdrops.filter(ad => ad.name.toLowerCase().includes(searchText));
@@ -48,7 +52,7 @@ function displayAirdrops(airdrops) {
                 `;
 
             // Добавление обработчика событий для открытия страницы описания
-            adElement.addEventListener('click', function() {
+            adElement.addEventListener('click', function () {
                 showAboutPage(ad.id);
             });
 
@@ -58,7 +62,6 @@ function displayAirdrops(airdrops) {
         section.innerHTML = '<div>No airdrops found.</div>';
     }
 }
-
 
 
 function showAboutPage(adId) {
@@ -140,3 +143,33 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(error => console.error('Ошибка при загрузке airdrops:', error));
 });
 
+
+function listenForDisplayChanges() {
+    chrome.system.display.getInfo(function (displays) {
+        if (displays && displays.length > 0) {
+            const primaryDisplay = displays.find((display) => display.isPrimary) || displays[0];
+            const width = primaryDisplay.bounds.width;
+
+            if (width < 700) {
+                document.body.style.width = '310';
+                document.body.style.height = '100vh';
+            } else {
+                document.body.style.width = '410';
+                document.body.style.height = '100vh';
+            }
+        }
+    });
+}
+
+const cookies = document.querySelector('#cookies');
+
+function getCookiesCount() {
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        var activeTab = tabs[0];
+        if (activeTab.url) {
+            chrome.cookies.getAll({ url: activeTab.url }, function (cookie) {
+                cookies.innerHTML = cookie.length;
+            });
+        }
+    });
+}

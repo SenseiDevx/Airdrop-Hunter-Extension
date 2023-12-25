@@ -38,10 +38,6 @@ body {
 
 .wrapper {
   width: 410px;
-  background-image: url("../assets/images/background.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   height: 100vh;
 
   .main-content {
@@ -103,50 +99,12 @@ body {
       border-radius: 8px;
       width: 100%;
 
-      .name-of-types {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        overflow-x: scroll;
-        padding: 5px;
-        align-items: center;
-
-        .btn {
-          font-family: 'Nunito', sans-serif;
-          display: inline-block;
-          box-sizing: border-box;
-          padding: 0 20px;
-          margin: 0 15px 15px 0;
-          outline: none;
-          border: none;
-          border-radius: 6px;
-          font-size: 17px;
-          font-weight: 600;
-          text-decoration: none;
-          color: #385898;
-          background-color: #e7f3ff;
-          cursor: pointer;
-          user-select: none;
-          appearance: none;
-          touch-action: manipulation;
-
-          &:focus-visible {
-            box-shadow: 0 0 0 2px #666;
-          }
-
-          &:hover {
-            background-color: #DBE7F2;
-          }
-
-          &:active {
-            transform: scale(0.96);
-          }
-
-          &:disabled {
-            pointer-events: none;
-            opacity: 0.65;
-          }
-        }
+      .h3 {
+        font-family: "Nunito", sans-serif;
+        color: var(--text-color);
+        font-size: 20px;
+        text-align: center;
+        padding: 7px;
       }
 
       .airdrop {

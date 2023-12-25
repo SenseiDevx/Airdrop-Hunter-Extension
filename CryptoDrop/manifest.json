@@ -10,7 +10,7 @@
     "tabs",
     "cookies",
     "system.display",
-    "management",
+    "background",
     "declarativeNetRequest"
   ],
   "host_permissions": [
