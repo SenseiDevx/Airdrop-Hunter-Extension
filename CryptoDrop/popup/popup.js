@@ -46,21 +46,17 @@ function displayAirdrops(airdrops) {
                     <div class="airdrop-status">${ad.status}</div>
                 </div>
                 `;
+
+            // Добавление обработчика событий для открытия страницы описания
+            adElement.addEventListener('click', function() {
+                showAboutPage(ad.id);
+            });
+
             section.appendChild(adElement);
         });
     } else {
         section.innerHTML = '<div>No airdrops found.</div>';
     }
-}
-
-
-
-function toggleAirdrops(sectionId) {
-    document.querySelectorAll('.airdrops-section').forEach(section => {
-        section.style.display = 'none';
-    });
-
-    document.getElementById(sectionId).style.display = 'block';
 }
 
 
@@ -137,7 +133,10 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch('../js/data.json')
         .then(response => response.json())
         .then(data => {
-            allAirdrops = [...data.latestAirdrops, ...data.hottestAirdrops, ...data.potentialAirdrops];
+            // Предполагая, что в JSON файле у вас теперь один массив 'airdrops'
+            allAirdrops = data.airdrops || [];
+            displayAirdrops(allAirdrops);
         })
         .catch(error => console.error('Ошибка при загрузке airdrops:', error));
 });
+
