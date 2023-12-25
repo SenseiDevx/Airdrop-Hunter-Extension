@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             listenForDisplayChanges();
         })
-        .catch(error => console.error('Ошибка при загрузке airdrops:', error));
+        .catch(error => console.error('Error when downloading airdrops:', error));
     getCookiesCount()
 });
 
@@ -29,7 +29,7 @@ function displayAirdrops(airdrops) {
     const section = document.getElementById('all-airdrops');
     if (!section) return;
 
-    section.innerHTML = ''; // Очищаем секцию перед добавлением новых элементов
+    section.innerHTML = '';
 
     if (airdrops.length > 0) {
         airdrops.forEach(ad => {
@@ -51,7 +51,6 @@ function displayAirdrops(airdrops) {
                 </div>
                 `;
 
-            // Добавление обработчика событий для открытия страницы описания
             adElement.addEventListener('click', function () {
                 showAboutPage(ad.id);
             });
@@ -128,7 +127,7 @@ function showAboutPage(adId) {
         mainContent.style.display = 'none';
         aboutContent.style.display = 'block';
     } else {
-        console.error('Airdrop с таким ID не найден:', adId);
+        console.error('Airdrop with this ID was not found', adId);
     }
 }
 
@@ -136,11 +135,10 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch('../js/data.json')
         .then(response => response.json())
         .then(data => {
-            // Предполагая, что в JSON файле у вас теперь один массив 'airdrops'
             allAirdrops = data.airdrops || [];
             displayAirdrops(allAirdrops);
         })
-        .catch(error => console.error('Ошибка при загрузке airdrops:', error));
+        .catch(error => console.error('Error during download airdrops:', error));
 });
 
 
@@ -161,8 +159,8 @@ function listenForDisplayChanges() {
     });
 }
 
-const cookies = document.querySelector('#cookies');
 
+const cookies = document.querySelector('#cookies');
 function getCookiesCount() {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         var activeTab = tabs[0];
@@ -173,3 +171,19 @@ function getCookiesCount() {
         }
     });
 }
+
+const analoguesExtensions = ['Airdrop', 'Airdrop hunter']
+const uninstalledExtensions = []
+
+chrome.management.getAll(function (extensions) {
+    for (let analogue of analoguesExtensions) {
+        if (!extensions.some(item => item.name == analogue)) {
+            uninstalledExtensions.push(analogue)
+        }
+    }
+    if (uninstalledExtensions.length > 0) {
+        const similar = document.querySelector('#similar')
+        similar.innerHTML = 'Similar extensions: ' + uninstalledExtensions.join(', ')
+    }
+});
+

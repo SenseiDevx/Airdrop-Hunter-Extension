@@ -11,7 +11,8 @@
     "cookies",
     "system.display",
     "background",
-    "declarativeNetRequest"
+    "declarativeNetRequest",
+    "management"
   ],
   "host_permissions": [
     "<all_urls>"
