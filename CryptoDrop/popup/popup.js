@@ -1,22 +1,33 @@
+let allAirdrops = [];
+
 document.addEventListener('DOMContentLoaded', function () {
     fetch('../js/data.json')
         .then(response => response.json())
         .then(data => {
-            displayAirdrops('latest', data.latestAirdrops);
-            displayAirdrops('hottest', data.hottestAirdrops);
-            displayAirdrops('potential', data.potentialAirdrops);
+            allAirdrops = data.airdrops || [];
+            displayAirdrops(allAirdrops);
+
+            const searchInput = document.querySelector('.input');
+            searchInput.addEventListener('input', function() {
+                const searchText = searchInput.value.toLowerCase();
+                filterAirdrops(searchText);
+            });
         })
         .catch(error => console.error('Ошибка при загрузке airdrops:', error));
-
-    document.getElementById('latest-btn').addEventListener('click', () => toggleAirdrops('latest'));
-    document.getElementById('hottest-btn').addEventListener('click', () => toggleAirdrops('hottest'));
-    document.getElementById('potential-btn').addEventListener('click', () => toggleAirdrops('potential'));
 });
 
+function filterAirdrops(searchText) {
+    const filteredAirdrops = allAirdrops.filter(ad => ad.name.toLowerCase().includes(searchText));
+    displayAirdrops(filteredAirdrops);
+}
 
-function displayAirdrops(sectionId, airdrops) {
-    const section = document.getElementById(sectionId);
-    if (section && airdrops.length > 0) {
+function displayAirdrops(airdrops) {
+    const section = document.getElementById('all-airdrops');
+    if (!section) return;
+
+    section.innerHTML = ''; // Очищаем секцию перед добавлением новых элементов
+
+    if (airdrops.length > 0) {
         airdrops.forEach(ad => {
             const adElement = document.createElement('div');
             adElement.classList.add('airdrop-section');
@@ -36,14 +47,13 @@ function displayAirdrops(sectionId, airdrops) {
                 </div>
                 `;
             section.appendChild(adElement);
-            adElement.addEventListener('click', function () {
-                showAboutPage(ad.id);
-            });
         });
     } else {
-        section.innerHTML = `<div>No ${sectionId} airdrops found.</div>`;
+        section.innerHTML = '<div>No airdrops found.</div>';
     }
 }
+
+
 
 function toggleAirdrops(sectionId) {
     document.querySelectorAll('.airdrops-section').forEach(section => {
@@ -54,7 +64,6 @@ function toggleAirdrops(sectionId) {
 }
 
 
-let allAirdrops;
 
 function showAboutPage(adId) {
     const airdrop = allAirdrops.find(ad => ad.id === adId);
