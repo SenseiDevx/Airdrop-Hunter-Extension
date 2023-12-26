@@ -9,6 +9,7 @@
   --border-solid-color: #00ff76;
   --description-text-color: #0c1533;
   --list-color: #000000;
+  --step-by-step-bg-color: #9dcccc;
 }
 
 * {
@@ -398,6 +399,12 @@ body {
   font-size: 18px;
   color: var(--description-text-color);
   padding-bottom: 10px;
+}
+.wrapper .about-content .about-airdrop .airdrop-about-description .step-by-step {
+  border: 1px solid var(--description-text-color);
+  border-radius: 5px;
+  padding: 7px;
+  background-color: var(--step-by-step-bg-color);
 }
 .wrapper .about-content .about-airdrop .airdrop-about-description .step-by-step .h3 {
   font-family: "Nunito", sans-serif;
