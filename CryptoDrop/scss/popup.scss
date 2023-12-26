@@ -190,6 +190,21 @@ body {
           }
         }
       }
+
+      .getCookies {
+        .h4 {
+          font-family: "Nunito", sans-serif;
+          color: var(--card-text-color);
+          display: flex;
+          gap: 5px;
+          padding: 5px;
+
+          span {
+            font-family: "Nunito", sans-serif;
+            color: var(--card-text-color);
+          }
+        }
+      }
     }
   }
 
@@ -272,6 +287,7 @@ body {
         align-items: start;
         animation: changeWidth 8s ease-in-out infinite;
         background: rgba(0, 105, 255, 0.2);
+        border: 1px solid var(--text-color);
         backdrop-filter: blur(50px);
         border-radius: 8px;
         padding: 15px;
@@ -309,6 +325,7 @@ body {
         background: rgba(0, 105, 255, 0.2);
         backdrop-filter: blur(50px);
         border-radius: 8px;
+        border: 1px solid var(--text-color);
 
         .airdrop-descriptions {
           display: flex;
@@ -333,7 +350,7 @@ body {
             font-family: "Nunito", sans-serif;
             color: var(--list-color);
             font-size: 16px;
-            padding-left: 17px;
+            padding-left: 19px;
           }
         }
 
@@ -374,7 +391,6 @@ body {
             background-color: #efefef !important;
           }
         }
-
       }
     }
   }

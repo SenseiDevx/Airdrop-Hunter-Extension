@@ -232,6 +232,19 @@ body {
   padding: 5px;
   border-radius: 5px;
 }
+.wrapper .main-content .main-block .getCookies .h4 {
+  font-family: "Nunito", sans-serif;
+  color: var(--card-text-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+}
+.wrapper .main-content .main-block .getCookies .h4 span {
+  font-family: "Nunito", sans-serif;
+  color: var(--card-text-color);
+}
 .wrapper .about-content {
   -webkit-animation: changeWidth 8s ease-in-out infinite;
           animation: changeWidth 8s ease-in-out infinite;
@@ -329,6 +342,7 @@ body {
   -webkit-animation: changeWidth 8s ease-in-out infinite;
           animation: changeWidth 8s ease-in-out infinite;
   background: rgba(0, 105, 255, 0.2);
+  border: 1px solid var(--text-color);
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
   border-radius: 8px;
@@ -368,6 +382,7 @@ body {
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
   border-radius: 8px;
+  border: 1px solid var(--text-color);
 }
 .wrapper .about-content .about-airdrop .airdrop-about-description .airdrop-descriptions {
   display: -webkit-box;
@@ -393,7 +408,7 @@ body {
   font-family: "Nunito", sans-serif;
   color: var(--list-color);
   font-size: 16px;
-  padding-left: 17px;
+  padding-left: 19px;
 }
 .wrapper .about-content .about-airdrop .airdrop-about-description .airdrop-button {
   display: inline-block;
