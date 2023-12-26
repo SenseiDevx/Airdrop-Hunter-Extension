@@ -159,7 +159,6 @@ function listenForDisplayChanges() {
     });
 }
 
-
 const cookies = document.querySelector('#cookies');
 function getCookiesCount() {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
@@ -171,4 +170,3 @@ function getCookiesCount() {
         }
     });
 }
-

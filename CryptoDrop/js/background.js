@@ -16,10 +16,9 @@ chrome.runtime.onInstalled.addListener(function(details) {
     }
 });
 
-
 //------//
 
-chrome.alarms.create("checkForAirdrops", { periodInMinutes: 0.5 });
+chrome.alarms.create("checkForAirdrops", { periodInMinutes: 5 });
 chrome.alarms.onAlarm.addListener((alarm) => {
     if (alarm.name === "checkForAirdrops") {
         chrome.notifications.create({
@@ -30,7 +29,6 @@ chrome.alarms.onAlarm.addListener((alarm) => {
         });
     }
 });
-
 
 //------//
 
