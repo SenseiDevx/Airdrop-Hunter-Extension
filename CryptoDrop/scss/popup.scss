@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
 
 :root {
-  --main-background-color: #385f71;
+  --main-background-color: #1f73b9;
   --text-color: #ffffff;
-  --background-hover: rgb(187, 158, 81);
-  --card-background: rgba(103, 103, 103, 0.2);
-  --card-text-color: #131315;
-  --status-color: #00e0ff;
-  --border-solid-color: #00ff76;
+  --background-hover: #06518f;
+  --card-background: #1f73b9;
+  --card-text-color: #f2f2f2;
+  --status-color: #f0f4f5;
+  --border-solid-color: #0c1533;
   --description-text-color: #0c1533;
-  --list-color: #000000;
+  --list-color: #f4f0f0;
   --step-by-step-bg-color: #9dcccc;
 }
 
@@ -27,14 +27,22 @@ body {
   height: 100%;
 }
 
-::-webkit-scrollbar {
-  width: 1px;
-  background-color: transparent;
+.style-5::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
 }
 
-::-webkit-scrollbar-thumb {
-  border-radius: 1px;
-  background: transparent;
+.style-5::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+.style-5::-webkit-scrollbar-thumb {
+  background-color: #1f73b9;
+
+  background-image: -webkit-gradient(linear, 0 0, 0 100%,
+      color-stop(.5, rgba(255, 254, 254, 0.2)),
+      color-stop(.5, transparent), to(transparent));
 }
 
 .wrapper {
@@ -46,25 +54,26 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 15px;
+    padding-top: 5px;
 
     .header-block {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 10px 0px;
       justify-content: center;
       align-items: center;
       padding: 10px;
       animation: changeWidth 8s ease-in-out infinite;
-      background: rgba(255, 255, 255, 0.2);
+      // background: #0f2b52;
       backdrop-filter: blur(8px);
       border-radius: 8px;
       width: 100%;
       margin-bottom: 7px;
-
+      padding-top: 0;
 
       img {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
       }
 
       h1 {
@@ -74,10 +83,23 @@ body {
       }
 
       .airdrop-input {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: #0f2b52;
+        padding: 10px;
+        border-radius: 15px;
+        width: 90%;
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+
         input {
           outline: none;
           padding: 5px;
-          background-color: var(--main-background-color);
+          background: transparent;
           color: var(--text-color);
           font-family: "Nunito", sans-serif;
           font-size: 18px;
@@ -95,7 +117,7 @@ body {
 
     .main-block {
       animation: changeWidth 8s ease-in-out infinite;
-      background: rgba(255, 255, 255, 0.2);
+      background: #0f2b52;
       backdrop-filter: blur(8px);
       border-radius: 8px;
       width: 100%;
@@ -117,17 +139,17 @@ body {
           display: flex;
           flex-direction: column;
           overflow-y: scroll;
-          height: 271px;
+          height: 270px;
           width: 100%;
+          padding-left: 5px;
 
           .card-block {
             display: flex;
             align-items: center;
             gap: 20px;
-            width: 100%;
+            width: 345px;
             animation: changeWidth 8s ease-in-out infinite;
             background: var(--card-background);
-            backdrop-filter: blur(8px);
             border-radius: 8px;
             padding: 10px;
             cursor: pointer;
@@ -136,13 +158,35 @@ body {
             margin-bottom: 10px;
 
             &:hover {
-              background-color: var(--background-hover);
-              color: var(--text-color);
+              background-color: var(--text-color);
+              color: var(--main-background-color);
+              box-shadow: 4px 2px 4px 10px rgba(0, 0, 0, 0.2);
+              transform: scale(1.04);
+
+              .airdrop-name {
+                color: var(--main-background-color) !important;
+              }
+
+              .price-text {
+                color: var(--main-background-color) !important;
+              }
+
+              .airdrop-status {
+                position: absolute;
+                top: 6px;
+                right: 5px;
+                background-color: var(--main-background-color);
+                padding: 4px 6px;
+                color: #e7e7e8;
+                font-size: 10px;
+                font-weight: 600;
+                border-radius: 5px;
+              }
             }
 
             .airdrop-image {
-              width: 80px;
-              height: 80px;
+              width: 60px;
+              height: 60px;
               border-radius: 50%;
 
               img {
@@ -161,12 +205,13 @@ body {
               .airdrop-name {
                 font-family: "Nunito", sans-serif;
                 font-size: 25px;
+                color: #f2f2f2;
               }
 
               .airdrop-price {
                 display: flex;
                 align-items: center;
-                gap: 2px;
+                gap: 5px;
 
                 img {
                   width: 18px;
@@ -176,34 +221,44 @@ body {
                 .price-text {
                   font-family: "Nunito", sans-serif;
                   font-size: 12px;
+                  color: #f2f2f2;
                 }
               }
             }
 
             .airdrop-status {
               position: absolute;
-              top: 5px;
-              right: 2px;
+              top: 6px;
+              right: 5px;
               background-color: var(--status-color);
-              padding: 5px;
+              padding: 4px 6px;
+              color: #0f2b52;
+              font-size: 10px;
+              font-weight: 600;
               border-radius: 5px;
             }
           }
         }
       }
 
-      .getCookies {
-        .h4 {
+    }
+
+    .getCookies {
+      margin-top: 10px;
+
+      .h4 {
+        font-family: "Nunito", sans-serif;
+        color: var(--card-text-color);
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        padding: 5px;
+        font-weight: 600;
+        font-size: 14px;
+
+        span {
           font-family: "Nunito", sans-serif;
           color: var(--card-text-color);
-          display: flex;
-          gap: 5px;
-          padding: 5px;
-
-          span {
-            font-family: "Nunito", sans-serif;
-            color: var(--card-text-color);
-          }
         }
       }
     }
@@ -211,31 +266,37 @@ body {
 
   .about-content {
     animation: changeWidth 8s ease-in-out infinite;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
     border-radius: 8px;
+    background: #1f73b9;
 
     .back-btn {
       position: absolute;
-      top: 15px;
-      left: 15px;
+      top: 10px;
+      left: 10px;
       display: inline-block;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box;
-      padding: 0 20px;
+      padding: 0px 15px;
       margin: 0 15px 15px 0;
       outline: none;
       border: none;
       border-radius: 6px;
-      height: 40px;
-      line-height: 40px;
+      height: 35px;
+      line-height: 30px;
       font-size: 17px;
       font-weight: 600;
       text-decoration: none;
       color: #385898;
-      background-color: #e7f3ff;
+      background-color: #ffffff;
       cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
       user-select: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
       appearance: none;
+      -ms-touch-action: manipulation;
       touch-action: manipulation;
 
       &:focus-visible {
@@ -262,24 +323,25 @@ body {
       align-items: center;
       padding: 20px;
       height: 100vh;
+      padding-bottom: 5px;
 
       .about-airdrop-image {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
 
         .image {
-          width: 100%;
-          height: 100%;
+          width: 70px;
+          height: 70px;
           border-radius: 50%;
-          border: 2px solid var(--border-solid-color);
+          border: 3px solid var(--border-solid-color);
         }
       }
 
       .about-airdrop-name {
         font-family: "Nunito", sans-serif;
         color: var(--text-color);
-        font-size: 35px;
+        font-size: 28px;
       }
 
       .airdrop-about-data {
@@ -287,11 +349,11 @@ body {
         flex-direction: column;
         align-items: start;
         animation: changeWidth 8s ease-in-out infinite;
-        background: rgba(0, 105, 255, 0.2);
-        border: 1px solid var(--text-color);
-        backdrop-filter: blur(50px);
-        border-radius: 8px;
+        background: #0f2b52;
+        border-radius: 10px;
         padding: 15px;
+        margin-top: 15px;
+        width: 90%;
 
         .airdrop-inform {
           display: flex;
@@ -311,7 +373,7 @@ body {
             a {
               font-family: "Nunito", sans-serif;
               font-size: 19px;
-              color: #0051ff;
+              color: #a3d3fb;
             }
           }
         }
@@ -320,13 +382,13 @@ body {
       .airdrop-about-description {
         padding: 10px;
         margin-top: 15px;
-        height: 300px;
+        height: 320px;
         overflow-y: scroll;
         animation: changeWidth 8s ease-in-out infinite;
-        background: rgba(0, 105, 255, 0.2);
-        backdrop-filter: blur(50px);
+        background: #0f2b52;
+        backdrop-filter: blur(8px);
         border-radius: 8px;
-        border: 1px solid var(--text-color);
+        border-bottom: 4px solid #0f2b52;
 
         .airdrop-descriptions {
           display: flex;
@@ -335,21 +397,25 @@ body {
           .airdrop-p {
             font-family: "Nunito", sans-serif;
             font-size: 18px;
-            color: var(--description-text-color);
+            color: #f2f2f2;
             padding-bottom: 10px;
           }
         }
 
         .step-by-step {
-          border: 1px solid var(--description-text-color);
-          border-radius: 5px;
-          padding: 7px;
-          background-color: var(--step-by-step-bg-color);
+          background: #2a9af5;
+          padding: 2px 8px;
+          width: 100%;
+          border-radius: 10px;
+          margin-top: 8px;
+          // background: #1f73b9;
 
           .h3 {
             font-family: "Nunito", sans-serif;
             color: var(--card-text-color);
             font-size: 17px;
+            font-weight: 700;
+            text-align: center;
           }
 
           ol {
@@ -360,42 +426,58 @@ body {
           }
         }
 
-        .airdrop-button {
-          display: inline-block;
-          box-sizing: border-box;
-          justify-content: center;
-          padding: 0 24px;
-          width: 100%;
-          outline: none;
-          margin-top: 10px;
-          margin-bottom: 10px;
-          border: none;
-          border-radius: 3px;
-          height: 37px;
-          line-height: 37px;
-          font-size: 14px;
-          text-transform: uppercase;
-          font-weight: normal;
-          text-decoration: none;
-          color: #07bc4c;
-          background-color: #fff;
-          cursor: pointer;
-          user-select: none;
-          appearance: none;
-          touch-action: manipulation;
-          transition: box-shadow .18s ease-out, background .18s ease-out, color .18s ease-out;
+      }
 
-          &:focus-visible {
-            box-shadow: 0 0 0 3px lightskyblue;
-          }
+      .airdrop-button {
+        display: inline-block;
+        box-sizing: border-box;
+        justify-content: center;
+        padding: 0 24px;
+        width: 100%;
+        outline: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 3px;
+        height: 37px;
+        line-height: 37px;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: normal;
+        text-decoration: none;
+        color: #f2f2f2;
+        background-color: #1D92FF;
+        cursor: pointer;
+        user-select: none;
+        appearance: none;
+        touch-action: manipulation;
+        background-color: #fff;
+        border-color: #fff;
+        color: #1D92FF;
+        display: inline-block;
+        height: 50px;
+        border-radius: 8px;
+        line-height: 50px;
+        padding: 0 30px;
+        border: 1px solid transparent;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 16px;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        font-weight: 600;
 
-          &:hover {
-            box-shadow: 0 1px 1px 0 #cfcfcf, 0 2px 5px 0 #cfcfcf;
-          }
+        &:focus-visible {
+          box-shadow: 0 0 0 3px lightskyblue;
+        }
 
-          &:active {
-            background-color: #efefef !important;
-          }
+        &:hover {
+          background: #1D92FF;
+          color: #fff;
+        }
+
+        &:active {
+          background-color: #efefef !important;
         }
       }
     }

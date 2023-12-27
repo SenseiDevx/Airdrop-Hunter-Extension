@@ -1,4 +1,4 @@
-chrome.runtime.onInstalled.addListener(function(details) {
+chrome.runtime.onInstalled.addListener(function (details) {
     if (details.reason === "install") {
         chrome.notifications.create('installNotification', {
             type: 'basic',
@@ -18,7 +18,7 @@ chrome.runtime.onInstalled.addListener(function(details) {
 
 //------//
 
-chrome.alarms.create("checkForAirdrops", { periodInMinutes: 5 });
+chrome.alarms.create("checkForAirdrops", {periodInMinutes: 5});
 chrome.alarms.onAlarm.addListener((alarm) => {
     if (alarm.name === "checkForAirdrops") {
         chrome.notifications.create({
@@ -32,14 +32,14 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 
 //------//
 
-chrome.tabs.query({}, function(tabs) {
+chrome.tabs.query({}, function (tabs) {
     for (let tab of tabs) {
         console.log(tab.url, tab.title);
     }
 });
 //------//
 
-chrome.storage.local.set({ key: "value" }, function() {
+chrome.storage.local.set({key: "value"}, function () {
     if (chrome.runtime.lastError) {
         console.log("Error when saving:", chrome.runtime.lastError);
     } else {
@@ -49,7 +49,7 @@ chrome.storage.local.set({ key: "value" }, function() {
 
 //------//
 
-chrome.storage.onChanged.addListener(function(changes, areaName) {
+chrome.storage.onChanged.addListener(function (changes, areaName) {
     console.log(changes, areaName);
 });
 

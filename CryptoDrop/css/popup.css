@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap");
 :root {
-  --main-background-color: #385f71;
+  --main-background-color: #1f73b9;
   --text-color: #ffffff;
-  --background-hover: rgb(187, 158, 81);
-  --card-background: rgba(103, 103, 103, 0.2);
-  --card-text-color: #131315;
-  --status-color: #00e0ff;
-  --border-solid-color: #00ff76;
+  --background-hover: #06518f;
+  --card-background: #1f73b9;
+  --card-text-color: #f2f2f2;
+  --status-color: #f0f4f5;
+  --border-solid-color: #0c1533;
   --description-text-color: #0c1533;
-  --list-color: #000000;
+  --list-color: #f4f0f0;
   --step-by-step-bg-color: #9dcccc;
 }
 
@@ -27,14 +27,19 @@ body {
   height: 100%;
 }
 
-::-webkit-scrollbar {
-  width: 1px;
-  background-color: transparent;
+.style-5::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
 }
 
-::-webkit-scrollbar-thumb {
-  border-radius: 1px;
-  background: transparent;
+.style-5::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+.style-5::-webkit-scrollbar-thumb {
+  background-color: #1f73b9;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(255, 254, 254, 0.2)), color-stop(0.5, transparent), to(transparent));
 }
 
 .wrapper {
@@ -53,6 +58,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 15px;
+  padding-top: 5px;
 }
 .wrapper .main-content .header-block {
   display: -webkit-box;
@@ -60,7 +66,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px 0px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -70,26 +76,43 @@ body {
   padding: 10px;
   -webkit-animation: changeWidth 8s ease-in-out infinite;
           animation: changeWidth 8s ease-in-out infinite;
-  background: rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   border-radius: 8px;
   width: 100%;
   margin-bottom: 7px;
+  padding-top: 0;
 }
 .wrapper .main-content .header-block img {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
 }
 .wrapper .main-content .header-block h1 {
   font-family: "Nunito", sans-serif;
   color: var(--text-color);
   font-size: 35px;
 }
+.wrapper .main-content .header-block .airdrop-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  background: #0f2b52;
+  padding: 10px;
+  border-radius: 15px;
+  width: 90%;
+}
+.wrapper .main-content .header-block .airdrop-input img {
+  width: 40px;
+  height: 40px;
+}
 .wrapper .main-content .header-block .airdrop-input input {
   outline: none;
   padding: 5px;
-  background-color: var(--main-background-color);
+  background: transparent;
   color: var(--text-color);
   font-family: "Nunito", sans-serif;
   font-size: 18px;
@@ -124,7 +147,7 @@ body {
 .wrapper .main-content .main-block {
   -webkit-animation: changeWidth 8s ease-in-out infinite;
           animation: changeWidth 8s ease-in-out infinite;
-  background: rgba(255, 255, 255, 0.2);
+  background: #0f2b52;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   border-radius: 8px;
@@ -153,8 +176,9 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow-y: scroll;
-  height: 271px;
+  height: 270px;
   width: 100%;
+  padding-left: 5px;
 }
 .wrapper .main-content .main-block .airdrop .airdrops-section .card-block {
   display: -webkit-box;
@@ -164,12 +188,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
-  width: 100%;
+  width: 345px;
   -webkit-animation: changeWidth 8s ease-in-out infinite;
           animation: changeWidth 8s ease-in-out infinite;
   background: var(--card-background);
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
   border-radius: 8px;
   padding: 10px;
   cursor: pointer;
@@ -179,12 +201,33 @@ body {
   margin-bottom: 10px;
 }
 .wrapper .main-content .main-block .airdrop .airdrops-section .card-block:hover {
-  background-color: var(--background-hover);
-  color: var(--text-color);
+  background-color: var(--text-color);
+  color: var(--main-background-color);
+  -webkit-box-shadow: 4px 2px 4px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 4px 2px 4px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block:hover .airdrop-name {
+  color: var(--main-background-color) !important;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block:hover .price-text {
+  color: var(--main-background-color) !important;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block:hover .airdrop-status {
+  position: absolute;
+  top: 6px;
+  right: 5px;
+  background-color: var(--main-background-color);
+  padding: 4px 6px;
+  color: #e7e7e8;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 5px;
 }
 .wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-image {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
 }
 .wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-image img {
@@ -207,6 +250,7 @@ body {
 .wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-data .airdrop-name {
   font-family: "Nunito", sans-serif;
   font-size: 25px;
+  color: #f2f2f2;
 }
 .wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-data .airdrop-price {
   display: -webkit-box;
@@ -215,7 +259,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 2px;
+  gap: 5px;
 }
 .wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-data .airdrop-price img {
   width: 18px;
@@ -224,65 +268,75 @@ body {
 .wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-data .airdrop-price .price-text {
   font-family: "Nunito", sans-serif;
   font-size: 12px;
+  color: #f2f2f2;
 }
 .wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-status {
   position: absolute;
-  top: 5px;
-  right: 2px;
+  top: 6px;
+  right: 5px;
   background-color: var(--status-color);
-  padding: 5px;
+  padding: 4px 6px;
+  color: #0f2b52;
+  font-size: 10px;
+  font-weight: 600;
   border-radius: 5px;
 }
-.wrapper .main-content .main-block .getCookies .h4 {
+.wrapper .main-content .getCookies {
+  margin-top: 10px;
+}
+.wrapper .main-content .getCookies .h4 {
   font-family: "Nunito", sans-serif;
   color: var(--card-text-color);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 5px;
+  font-weight: 600;
+  font-size: 14px;
 }
-.wrapper .main-content .main-block .getCookies .h4 span {
+.wrapper .main-content .getCookies .h4 span {
   font-family: "Nunito", sans-serif;
   color: var(--card-text-color);
 }
 .wrapper .about-content {
   -webkit-animation: changeWidth 8s ease-in-out infinite;
           animation: changeWidth 8s ease-in-out infinite;
-  background: rgba(255, 255, 255, 0.2);
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
   border-radius: 8px;
+  background: #1f73b9;
 }
 .wrapper .about-content .back-btn {
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 10px;
+  left: 10px;
   display: inline-block;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0 20px;
+  box-sizing: border-box;
+  padding: 0px 15px;
   margin: 0 15px 15px 0;
   outline: none;
   border: none;
   border-radius: 6px;
-  height: 40px;
-  line-height: 40px;
+  height: 35px;
+  line-height: 30px;
   font-size: 17px;
   font-weight: 600;
   text-decoration: none;
   color: #385898;
-  background-color: #e7f3ff;
+  background-color: #ffffff;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   -ms-touch-action: manipulation;
-      touch-action: manipulation;
+  touch-action: manipulation;
 }
 .wrapper .about-content .back-btn:focus-visible {
   -webkit-box-shadow: 0 0 0 2px #666;
@@ -312,22 +366,27 @@ body {
           align-items: center;
   padding: 20px;
   height: 100vh;
+  padding-bottom: 5px;
 }
 .wrapper .about-content .about-airdrop .about-airdrop-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
 }
 .wrapper .about-content .about-airdrop .about-airdrop-image .image {
-  width: 100%;
-  height: 100%;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  border: 2px solid var(--border-solid-color);
+  border: 3px solid var(--border-solid-color);
 }
 .wrapper .about-content .about-airdrop .about-airdrop-name {
   font-family: "Nunito", sans-serif;
   color: var(--text-color);
-  font-size: 35px;
+  font-size: 28px;
 }
 .wrapper .about-content .about-airdrop .airdrop-about-data {
   display: -webkit-box;
@@ -342,12 +401,11 @@ body {
           align-items: start;
   -webkit-animation: changeWidth 8s ease-in-out infinite;
           animation: changeWidth 8s ease-in-out infinite;
-  background: rgba(0, 105, 255, 0.2);
-  border: 1px solid var(--text-color);
-  -webkit-backdrop-filter: blur(50px);
-          backdrop-filter: blur(50px);
-  border-radius: 8px;
+  background: #0f2b52;
+  border-radius: 10px;
   padding: 15px;
+  margin-top: 15px;
+  width: 90%;
 }
 .wrapper .about-content .about-airdrop .airdrop-about-data .airdrop-inform {
   display: -webkit-box;
@@ -370,20 +428,20 @@ body {
 .wrapper .about-content .about-airdrop .airdrop-about-data .airdrop-inform .p a {
   font-family: "Nunito", sans-serif;
   font-size: 19px;
-  color: #0051ff;
+  color: #a3d3fb;
 }
 .wrapper .about-content .about-airdrop .airdrop-about-description {
   padding: 10px;
   margin-top: 15px;
-  height: 300px;
+  height: 320px;
   overflow-y: scroll;
   -webkit-animation: changeWidth 8s ease-in-out infinite;
           animation: changeWidth 8s ease-in-out infinite;
-  background: rgba(0, 105, 255, 0.2);
-  -webkit-backdrop-filter: blur(50px);
-          backdrop-filter: blur(50px);
+  background: #0f2b52;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
   border-radius: 8px;
-  border: 1px solid var(--text-color);
+  border-bottom: 4px solid #0f2b52;
 }
 .wrapper .about-content .about-airdrop .airdrop-about-description .airdrop-descriptions {
   display: -webkit-box;
@@ -397,19 +455,22 @@ body {
 .wrapper .about-content .about-airdrop .airdrop-about-description .airdrop-descriptions .airdrop-p {
   font-family: "Nunito", sans-serif;
   font-size: 18px;
-  color: var(--description-text-color);
+  color: #f2f2f2;
   padding-bottom: 10px;
 }
 .wrapper .about-content .about-airdrop .airdrop-about-description .step-by-step {
-  border: 1px solid var(--description-text-color);
-  border-radius: 5px;
-  padding: 7px;
-  background-color: var(--step-by-step-bg-color);
+  background: #2a9af5;
+  padding: 2px 8px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 8px;
 }
 .wrapper .about-content .about-airdrop .airdrop-about-description .step-by-step .h3 {
   font-family: "Nunito", sans-serif;
   color: var(--card-text-color);
   font-size: 17px;
+  font-weight: 700;
+  text-align: center;
 }
 .wrapper .about-content .about-airdrop .airdrop-about-description .step-by-step ol {
   font-family: "Nunito", sans-serif;
@@ -417,7 +478,7 @@ body {
   font-size: 16px;
   padding-left: 19px;
 }
-.wrapper .about-content .about-airdrop .airdrop-about-description .airdrop-button {
+.wrapper .about-content .about-airdrop .airdrop-button {
   display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -437,8 +498,8 @@ body {
   text-transform: uppercase;
   font-weight: normal;
   text-decoration: none;
-  color: #07bc4c;
-  background-color: #fff;
+  color: #f2f2f2;
+  background-color: #1D92FF;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -449,19 +510,30 @@ body {
           appearance: none;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
-  -webkit-transition: background 0.18s ease-out, color 0.18s ease-out, -webkit-box-shadow 0.18s ease-out;
-  transition: background 0.18s ease-out, color 0.18s ease-out, -webkit-box-shadow 0.18s ease-out;
-  transition: box-shadow 0.18s ease-out, background 0.18s ease-out, color 0.18s ease-out;
-  transition: box-shadow 0.18s ease-out, background 0.18s ease-out, color 0.18s ease-out, -webkit-box-shadow 0.18s ease-out;
+  background-color: #fff;
+  border-color: #fff;
+  color: #1D92FF;
+  display: inline-block;
+  height: 50px;
+  border-radius: 8px;
+  line-height: 50px;
+  padding: 0 30px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 16px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: 600;
 }
-.wrapper .about-content .about-airdrop .airdrop-about-description .airdrop-button:focus-visible {
+.wrapper .about-content .about-airdrop .airdrop-button:focus-visible {
   -webkit-box-shadow: 0 0 0 3px lightskyblue;
           box-shadow: 0 0 0 3px lightskyblue;
 }
-.wrapper .about-content .about-airdrop .airdrop-about-description .airdrop-button:hover {
-  -webkit-box-shadow: 0 1px 1px 0 #cfcfcf, 0 2px 5px 0 #cfcfcf;
-          box-shadow: 0 1px 1px 0 #cfcfcf, 0 2px 5px 0 #cfcfcf;
+.wrapper .about-content .about-airdrop .airdrop-button:hover {
+  background: #1D92FF;
+  color: #fff;
 }
-.wrapper .about-content .about-airdrop .airdrop-about-description .airdrop-button:active {
+.wrapper .about-content .about-airdrop .airdrop-button:active {
   background-color: #efefef !important;
 }

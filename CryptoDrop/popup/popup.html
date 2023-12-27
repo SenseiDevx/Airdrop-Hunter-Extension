@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,33 @@
     <link rel="stylesheet" href="../css/popup.css">
     <title>CryptoDrop</title>
 </head>
+
 <body>
-<div class="wrapper">
-    <div class="main-content">
-        <div class="header-block">
-            <img src="../assets/images/dollar.png" alt="dollar">
-            <h1>Crypto <br> Drop</h1>
-            <div class="airdrop-input">
-                <input class="input" type="text" placeholder="Search...">
+    <div class="wrapper">
+        <div class="main-content">
+            <div class="header-block">
+                <img src="../assets/images/dollar.png" alt="dollar">
+                <h1>Crypto Drop</h1>
+                <div class="airdrop-input">
+                    <img src="../assets/icons/searchIcon.svg" alt="icon">
+                    <input class="input" type="text" placeholder="Search...">
+                </div>
             </div>
-        </div>
-        <div class="main-block">
-            <h3 class="h3">
-                LATEST AIRDROPS
-            </h3>
-            <div class="airdrop" id="airdrops">
-                <div id="all-airdrops" class="airdrops-section"></div>
+            <div class="main-block">
+                <h3 class="h3">
+                    Top popular airdrops
+                </h3>
+                <div class="airdrop" id="airdrops">
+                    <div id="all-airdrops" class="airdrops-section style-5"></div>
+                </div>
             </div>
             <div class="getCookies">
-                <h4 class="h4">Number of cookies in the browser<span id="cookies"></span></h4>
+                <h4 class="h4">Number of cookies in the browser: <span id="cookies"></span></h4>
             </div>
         </div>
+        <div class="about-content"></div>
     </div>
-    <div class="about-content"></div>
-</div>
 </body>
 <script src="popup.js"></script>
+
 </html>

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Crypto Drop",
-  "description": "Track the latest crypto airdrops with ease! Get instant alerts and updates right in your browser with Crypto Drop",
+  "description": "Crypto Drop - extension tracks current airdrops, you will receive notifications about all available crypto airdrops, and much more.",
   "version": "1.0.0",
   "permissions": [
     "alarms",
@@ -11,7 +11,8 @@
     "cookies",
     "system.display",
     "background",
-    "declarativeNetRequest"
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
   ],
   "host_permissions": [
     "<all_urls>"
@@ -20,6 +21,16 @@
     "service_worker": "js/background.js",
     "type": "module"
   },
+  "content_scripts": [
+    {
+      "js": [
+        "js/content.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
   "action": {
     "default_title": "Crypto Drop",
     "default_popup": "./popup/popup.html",

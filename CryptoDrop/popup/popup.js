@@ -90,8 +90,8 @@ function showAboutPage(adId) {
             <div class="about-airdrop">
                 <div class="about-airdrop-image">
                     <img class="image" src="${airdrop.image}" alt="${airdrop.name}"> 
+                    <h2 class="about-airdrop-name">${airdrop.name}</h2>
                 </div>
-                <h2 class="about-airdrop-name">${airdrop.name}</h2>
                 <div class="airdrop-about-data">
                     <div class="airdrop-inform">
                         <img src="${airdrop.airdropLinkIcon}" alt="link">
@@ -106,7 +106,7 @@ function showAboutPage(adId) {
                         <p class="p">Platform: ${airdrop.platform}</p>
                     </div>
                 </div>
-                <div class="airdrop-about-description">
+                <div class="airdrop-about-description style-5">
                     <div class="airdrop-descriptions">
                         <p class="airdrop-p">${airdrop.description}</p>
                         <p class="airdrop-p">${airdrop.description2}</p>
@@ -115,10 +115,10 @@ function showAboutPage(adId) {
                         <h3 class="h3">Step-by-Step Guide:</h3>
                         ${guidesHtml}
                     </div>
+                </div>
                     <a href="${airdrop.airdropLink}" target="_blank">
                         <button class="airdrop-button" id="openPage">CLAIM AIRDROP</button>
                     </a>
-                </div>
             </div>
         `;
 
@@ -160,11 +160,12 @@ function listenForDisplayChanges() {
 }
 
 const cookies = document.querySelector('#cookies');
+
 function getCookiesCount() {
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
         var activeTab = tabs[0];
         if (activeTab.url) {
-            chrome.cookies.getAll({ url: activeTab.url }, function (cookie) {
+            chrome.cookies.getAll({url: activeTab.url}, function (cookie) {
                 cookies.innerHTML = cookie.length;
             });
         }
