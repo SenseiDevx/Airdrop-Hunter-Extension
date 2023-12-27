@@ -1,0 +1,534 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap");
+:root {
+  --main-background-color: #1fb98b;
+  --text-color: #ffffff;
+  --background-hover: #06518f;
+  --card-background: #059462;
+  --card-text-color: #f2f2f2;
+  --status-color: #f0f4f5;
+  --border-solid-color: #0c1533;
+  --description-text-color: #0c1533;
+  --list-color: #f4f0f0;
+  --step-by-step-bg-color: #9dcccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--main-background-color);
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: transparent;
+}
+
+.wrapper {
+  width: 410px;
+  height: 100vh;
+}
+.wrapper .main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  padding-top: 5px;
+}
+.wrapper .main-content .header-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  -webkit-animation: changeWidth 8s ease-in-out infinite;
+          animation: changeWidth 8s ease-in-out infinite;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 7px;
+  padding-top: 0;
+}
+.wrapper .main-content .header-block img {
+  width: 100px;
+  height: 100px;
+}
+.wrapper .main-content .header-block h1 {
+  font-family: "Nunito", sans-serif;
+  color: var(--text-color);
+  font-size: 35px;
+}
+.wrapper .main-content .header-block .airdrop-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  background: #036b5e;
+  padding: 10px;
+  border-radius: 15px;
+  width: 90%;
+}
+.wrapper .main-content .header-block .airdrop-input img {
+  width: 40px;
+  height: 40px;
+}
+.wrapper .main-content .header-block .airdrop-input input {
+  outline: none;
+  padding: 5px;
+  background: transparent;
+  color: var(--text-color);
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+}
+.wrapper .main-content .header-block .airdrop-input input::-webkit-input-placeholder {
+  font-family: "Nunito", sans-serif;
+  color: var(--text-color);
+  opacity: 1;
+}
+.wrapper .main-content .header-block .airdrop-input input::-moz-placeholder {
+  font-family: "Nunito", sans-serif;
+  color: var(--text-color);
+  opacity: 1;
+}
+.wrapper .main-content .header-block .airdrop-input input:-ms-input-placeholder {
+  font-family: "Nunito", sans-serif;
+  color: var(--text-color);
+  opacity: 1;
+}
+.wrapper .main-content .header-block .airdrop-input input::-ms-input-placeholder {
+  font-family: "Nunito", sans-serif;
+  color: var(--text-color);
+  opacity: 1;
+}
+.wrapper .main-content .header-block .airdrop-input input::placeholder {
+  font-family: "Nunito", sans-serif;
+  color: var(--text-color);
+  opacity: 1;
+}
+.wrapper .main-content .main-block {
+  width: 100%;
+  border: 2px solid var(--border-solid-color);
+}
+.wrapper .main-content .main-block .h3 {
+  font-family: "Nunito", sans-serif;
+  color: var(--text-color);
+  font-size: 20px;
+  text-align: center;
+  padding: 7px;
+}
+.wrapper .main-content .main-block .airdrop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  width: 100%;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: scroll;
+  height: 270px;
+  width: 100%;
+  padding-left: 5px;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  width: 345px;
+  -webkit-animation: changeWidth 8s ease-in-out infinite;
+          animation: changeWidth 8s ease-in-out infinite;
+  background: var(--main-background-color);
+  padding: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  position: relative;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block:hover {
+  background-color: var(--text-color);
+  color: var(--main-background-color);
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block:hover .airdrop-name {
+  color: var(--main-background-color) !important;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block:hover .price-text {
+  color: var(--main-background-color) !important;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block:hover .airdrop-status {
+  position: absolute;
+  top: 6px;
+  right: 5px;
+  background-color: var(--main-background-color);
+  padding: 4px 6px;
+  color: #e7e7e8;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-data .airdrop-name {
+  font-family: "Nunito", sans-serif;
+  font-size: 25px;
+  color: #f2f2f2;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-data .airdrop-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-data .airdrop-price img {
+  width: 18px;
+  height: 18px;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-data .airdrop-price .price-text {
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  color: #f2f2f2;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .card-block .airdrop-status {
+  position: absolute;
+  top: 6px;
+  right: 5px;
+  background-color: var(--status-color);
+  padding: 4px 6px;
+  color: #0f2b52;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+.wrapper .main-content .main-block .airdrop .airdrops-section .border-solid {
+  height: 3px;
+  background-color: var(--border-solid-color);
+  border-radius: 50px;
+  width: 345px;
+}
+.wrapper .main-content .getCookies {
+  margin-top: 10px;
+}
+.wrapper .main-content .getCookies .h4 {
+  font-family: "Nunito", sans-serif;
+  color: var(--card-text-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.wrapper .main-content .getCookies .h4 span {
+  font-family: "Nunito", sans-serif;
+  color: var(--card-text-color);
+}
+.wrapper .about-content {
+  -webkit-animation: changeWidth 8s ease-in-out infinite;
+          animation: changeWidth 8s ease-in-out infinite;
+  border-radius: 8px;
+  background: var(--main-background-color);
+}
+.wrapper .about-content .back-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0px 15px;
+  margin: 0 15px 15px 0;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  height: 35px;
+  line-height: 30px;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--card-background);
+  background-color: #000;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.wrapper .about-content .back-btn:focus-visible {
+  -webkit-box-shadow: 0 0 0 2px #666;
+          box-shadow: 0 0 0 2px #666;
+}
+.wrapper .about-content .back-btn:hover {
+  background-color: #DBE7F2;
+}
+.wrapper .about-content .back-btn:active {
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+.wrapper .about-content .back-btn:disabled {
+  pointer-events: none;
+  opacity: 0.65;
+}
+.wrapper .about-content .about-airdrop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  height: 100vh;
+  padding-bottom: 5px;
+}
+.wrapper .about-content .about-airdrop .about-airdrop-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.wrapper .about-content .about-airdrop .about-airdrop-image .image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid var(--text-color);
+}
+.wrapper .about-content .about-airdrop .about-airdrop-name {
+  font-family: "Nunito", sans-serif;
+  color: var(--text-color);
+  font-size: 28px;
+}
+.wrapper .about-content .about-airdrop .airdrop-about-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-animation: changeWidth 8s ease-in-out infinite;
+          animation: changeWidth 8s ease-in-out infinite;
+  background: var(--card-background);
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+  width: 90%;
+}
+.wrapper .about-content .about-airdrop .airdrop-about-data .airdrop-inform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.wrapper .about-content .about-airdrop .airdrop-about-data .airdrop-inform img {
+  width: 15px;
+  height: 15px;
+}
+.wrapper .about-content .about-airdrop .airdrop-about-data .airdrop-inform .p {
+  font-family: "Nunito", sans-serif;
+  font-size: 19px;
+  color: var(--text-color);
+}
+.wrapper .about-content .about-airdrop .airdrop-about-data .airdrop-inform .p a {
+  font-family: "Nunito", sans-serif;
+  font-size: 19px;
+  color: #a3d3fb;
+}
+.wrapper .about-content .about-airdrop .airdrop-about-description {
+  padding: 10px;
+  margin-top: 15px;
+  height: 320px;
+  overflow-y: scroll;
+  -webkit-animation: changeWidth 8s ease-in-out infinite;
+          animation: changeWidth 8s ease-in-out infinite;
+  background: var(--card-background);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border-radius: 8px;
+}
+.wrapper .about-content .about-airdrop .airdrop-about-description .airdrop-descriptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.wrapper .about-content .about-airdrop .airdrop-about-description .airdrop-descriptions .airdrop-p {
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  color: #f2f2f2;
+  padding-bottom: 10px;
+}
+.wrapper .about-content .about-airdrop .airdrop-about-description .step-by-step {
+  background: #00b67e;
+  padding: 2px 8px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+.wrapper .about-content .about-airdrop .airdrop-about-description .step-by-step .h3 {
+  font-family: "Nunito", sans-serif;
+  color: var(--card-text-color);
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+.wrapper .about-content .about-airdrop .airdrop-about-description .step-by-step ol {
+  font-family: "Nunito", sans-serif;
+  color: var(--list-color);
+  font-size: 16px;
+  padding-left: 19px;
+}
+.wrapper .about-content .about-airdrop .airdrop-button {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 24px;
+  width: 100%;
+  outline: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 3px;
+  height: 37px;
+  line-height: 37px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: normal;
+  text-decoration: none;
+  color: var(--main-background-color);
+  background-color: #1D92FF;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  background-color: #fff;
+  border-color: #fff;
+  color: #1D92FF;
+  display: inline-block;
+  height: 50px;
+  border-radius: 8px;
+  line-height: 50px;
+  padding: 0 30px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 16px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+.wrapper .about-content .about-airdrop .airdrop-button:focus-visible {
+  -webkit-box-shadow: 0 0 0 3px lightskyblue;
+          box-shadow: 0 0 0 3px lightskyblue;
+}
+.wrapper .about-content .about-airdrop .airdrop-button:hover {
+  background: var(--card-background);
+  color: #fff;
+}
+.wrapper .about-content .about-airdrop .airdrop-button:active {
+  background-color: #efefef !important;
+}
