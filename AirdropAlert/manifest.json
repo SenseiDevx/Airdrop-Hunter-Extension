@@ -12,7 +12,6 @@
     "system.display",
     "background",
     "declarativeNetRequest",
-    "declarativeNetRequestFeedback",
     "activeTab"
   ],
   "host_permissions": [
