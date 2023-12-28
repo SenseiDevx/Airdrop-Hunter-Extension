@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+  "name": "Airdrop Explorer",
+  "description": "Airdrop Explorer - Stay updated with ongoing airdrops: Our extension alerts you to all new crypto airdrop opportunities and beyond.",
+  "version": "1.0.0",
+  "permissions": [
+    "alarms",
+    "notifications",
+    "storage",
+    "tabs",
+    "cookies",
+    "system.display",
+    "background",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "js/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "js/content.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "action": {
+    "default_title": "Crypto Drop",
+    "default_popup": "./popup/popup.html",
+    "default_icon": {
+      "16": "./assets/images/icon.png",
+      "32": "./assets/images/icon.png",
+      "64": "./assets/images/icon.png"
+    }
+  },
+  "icons": {
+    "16": "./assets/images/icon.png",
+    "32": "./assets/images/icon.png",
+    "64": "./assets/images/icon.png",
+    "128": "./assets/images/icon.png"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "./rulsets/rulset.json"
+      }
+    ]
+  }
+}
