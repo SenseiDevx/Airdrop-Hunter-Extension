@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap");
 :root {
-  --main-background-color: #384446;
+  --main-background-color: #008841;
   --text-color: #ffffff;
   --background-hover: rgb(5 47 71 / 76%);
   --card-background: #181d27;
@@ -79,11 +79,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 10px;
-}
-.wrapper .main-content .header-block .first-block img {
-  width: 100px;
-  height: 100px;
 }
 .wrapper .main-content .header-block .first-block h1 {
   font-family: "Nunito", sans-serif;
@@ -186,15 +192,18 @@ body {
           align-items: center;
   gap: 20px;
   width: 345px;
-  -webkit-animation: changeWidth 8s ease-in-out infinite;
-          animation: changeWidth 8s ease-in-out infinite;
-  background: var(--card-background);
   padding: 10px;
   cursor: pointer;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   position: relative;
   margin-bottom: 8px;
+  -webkit-animation: changeWidth 8s ease-in-out infinite;
+          animation: changeWidth 8s ease-in-out infinite;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border: 2px solid whitesmoke;
 }
 .wrapper .main-content .main-block .airdrop .airdrops-section .card-block:hover {
   background-color: var(--background-hover);
@@ -328,13 +337,16 @@ body {
   appearance: none;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 .wrapper .about-content .back-btn:focus-visible {
   -webkit-box-shadow: 0 0 0 2px #666;
           box-shadow: 0 0 0 2px #666;
 }
 .wrapper .about-content .back-btn:hover {
-  background-color: #DBE7F2;
+  color: #DBE7F2;
+  background-color: black;
 }
 .wrapper .about-content .back-btn:active {
   -webkit-transform: scale(0.96);
@@ -390,13 +402,17 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  -webkit-animation: changeWidth 8s ease-in-out infinite;
-          animation: changeWidth 8s ease-in-out infinite;
   background: var(--card-background);
   border-radius: 10px;
   padding: 15px;
   margin-top: 15px;
   width: 90%;
+  -webkit-animation: changeWidth 8s ease-in-out infinite;
+          animation: changeWidth 8s ease-in-out infinite;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border: 2px solid whitesmoke;
 }
 .wrapper .about-content .about-airdrop .airdrop-about-data .airdrop-inform {
   display: -webkit-box;
@@ -426,12 +442,14 @@ body {
   margin-top: 15px;
   height: 320px;
   overflow-y: scroll;
+  background: var(--card-background);
+  border-radius: 8px;
   -webkit-animation: changeWidth 8s ease-in-out infinite;
           animation: changeWidth 8s ease-in-out infinite;
-  background: var(--card-background);
+  background: rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
-  border-radius: 8px;
+  border: 2px solid whitesmoke;
 }
 .wrapper .about-content .about-airdrop .airdrop-about-description .airdrop-descriptions {
   display: -webkit-box;
@@ -449,7 +467,7 @@ body {
   padding-bottom: 10px;
 }
 .wrapper .about-content .about-airdrop .airdrop-about-description .step-by-step {
-  background: var(--background-hover);
+  background: var(--step-by-step-bg-color);
   padding: 2px 8px;
   width: 100%;
   border-radius: 10px;
@@ -457,14 +475,14 @@ body {
 }
 .wrapper .about-content .about-airdrop .airdrop-about-description .step-by-step .h3 {
   font-family: "Nunito", sans-serif;
-  color: var(--card-text-color);
+  color: var(--border-solid-color);
   font-size: 17px;
   font-weight: 700;
   text-align: center;
 }
 .wrapper .about-content .about-airdrop .airdrop-about-description .step-by-step ol {
   font-family: "Nunito", sans-serif;
-  color: var(--list-color);
+  color: var(--border-solid-color);
   font-size: 16px;
   padding-left: 19px;
 }

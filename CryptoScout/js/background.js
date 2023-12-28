@@ -23,7 +23,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
     if (alarm.name === "checkForAirdrops") {
         chrome.notifications.create({
             type: "basic",
-            iconUrl: "../assets/images/airdropAlert.png",
+            iconUrl: "../assets/images/dollar.png",
             title: "New Airdrops",
             message: "Check the latest airdrops!"
         });

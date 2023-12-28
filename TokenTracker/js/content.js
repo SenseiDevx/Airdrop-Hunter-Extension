@@ -5,7 +5,7 @@ function createPopup() {
     popup.className = 'popup';
 
     popup.innerHTML = `
-        <h1 class="popup-title" style="color: #ffffff; font-size: 22px; font-weight: bold">Airdrop Explorer</h1>
+        <h1 class="popup-title" style="color: #ffffff; font-size: 22px; font-weight: bold">Crypto Drop</h1>
         <div id="airdrop-info" class="popup-info" style="color: #ffffff; font-size: 18px; font-weight: 500">Checking the current site...</div>`;
     document.body.appendChild(popup);
 }
@@ -27,7 +27,7 @@ function addStyles() {
             flex-direction: column;
             align-items: center;
             border-radius: 10px;
-            background-color: #384446;
+            background-color: #008841;
             text-align: center;
         }
     `;

@@ -27,7 +27,7 @@ function addStyles() {
             flex-direction: column;
             align-items: center;
             border-radius: 10px;
-            background-color: #1f73b9;
+            background-color: #4a564d;
             text-align: center;
         }
     `;

@@ -9,7 +9,7 @@ chrome.runtime.onInstalled.addListener(function (details) {
     } else if (details.reason === "update") {
         chrome.notifications.create('updateNotification', {
             type: 'basic',
-            iconUrl: "../assets/images/airdropAlert.png",
+            iconUrl: "../assets/images/dollar.png",
             title: 'Update complete',
             message: 'The extension has been successfully updated!'
         });

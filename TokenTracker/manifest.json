@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Airdrop Explorer",
-  "description": "Airdrop Explorer - Stay updated with ongoing airdrops: Our extension alerts you to all new crypto airdrop opportunities and beyond.",
+  "name": "Token Tracker",
+  "description": "Token Tracker - Stay informed of airdrops: Our extension notifies you about fresh crypto airdrop chances and more.",
   "version": "1.0.0",
   "permissions": [
     "alarms",
@@ -32,7 +32,7 @@
     }
   ],
   "action": {
-    "default_title": "Airdrop Explorer",
+    "default_title": "Token Tracker",
     "default_popup": "./popup/popup.html",
     "default_icon": {
       "16": "./assets/images/icon.png",

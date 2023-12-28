@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
 
 :root {
-  --main-background-color: #384446;
+  --main-background-color: #008841;
   --text-color: #ffffff;
   --background-hover: rgb(5 47 71 / 76%);
   --card-background: #181d27;
@@ -61,11 +61,10 @@ body {
 
       .first-block {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         gap: 10px;
-        img {
-          width: 100px;
-          height: 100px;
-        }
 
         h1 {
           font-family: 'Nunito', sans-serif;
@@ -154,13 +153,15 @@ body {
             align-items: center;
             gap: 20px;
             width: 345px;
-            animation: changeWidth 8s ease-in-out infinite;
-            background: var(--card-background);
             padding: 10px;
             cursor: pointer;
             transition: 0.4s;
             position: relative;
             margin-bottom: 8px;
+            animation: changeWidth 8s ease-in-out infinite;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            border: 2px solid whitesmoke;
 
             &:hover {
               background-color: var(--background-hover);
@@ -300,13 +301,15 @@ body {
       appearance: none;
       -ms-touch-action: manipulation;
       touch-action: manipulation;
+      transition: 0.4s;
 
       &:focus-visible {
         box-shadow: 0 0 0 2px #666;
       }
 
       &:hover {
-        background-color: #DBE7F2;
+        color: #DBE7F2;
+        background-color: black;
       }
 
       &:active {
@@ -332,6 +335,7 @@ body {
         align-items: center;
         gap: 10px;
 
+
         .image {
           width: 70px;
           height: 70px;
@@ -350,12 +354,15 @@ body {
         display: flex;
         flex-direction: column;
         align-items: start;
-        animation: changeWidth 8s ease-in-out infinite;
         background: var(--card-background);
         border-radius: 10px;
         padding: 15px;
         margin-top: 15px;
         width: 90%;
+        animation: changeWidth 8s ease-in-out infinite;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(8px);
+        border: 2px solid whitesmoke;
 
         .airdrop-inform {
           display: flex;
@@ -386,10 +393,12 @@ body {
         margin-top: 15px;
         height: 320px;
         overflow-y: scroll;
-        animation: changeWidth 8s ease-in-out infinite;
         background: var(--card-background);
-        backdrop-filter: blur(8px);
         border-radius: 8px;
+        animation: changeWidth 8s ease-in-out infinite;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(8px);
+        border: 2px solid whitesmoke;
 
         .airdrop-descriptions {
           display: flex;
@@ -404,7 +413,7 @@ body {
         }
 
         .step-by-step {
-          background: var(--background-hover);
+          background: var(--step-by-step-bg-color);
           padding: 2px 8px;
           width: 100%;
           border-radius: 10px;
@@ -412,7 +421,7 @@ body {
 
           .h3 {
             font-family: "Nunito", sans-serif;
-            color: var(--card-text-color);
+            color: var(--border-solid-color);
             font-size: 17px;
             font-weight: 700;
             text-align: center;
@@ -420,7 +429,7 @@ body {
 
           ol {
             font-family: "Nunito", sans-serif;
-            color: var(--list-color);
+            color: var(--border-solid-color);
             font-size: 16px;
             padding-left: 19px;
           }
