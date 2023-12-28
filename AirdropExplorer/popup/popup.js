@@ -106,7 +106,7 @@ function showAboutPage(adId) {
                         <p class="p">Platform: ${airdrop.platform}</p>
                     </div>
                 </div>
-                <div class="airdrop-about-description style-5">
+                <div class="airdrop-about-description">
                     <div class="airdrop-descriptions">
                         <p class="airdrop-p">${airdrop.description}</p>
                         <p class="airdrop-p">${airdrop.description2}</p>
