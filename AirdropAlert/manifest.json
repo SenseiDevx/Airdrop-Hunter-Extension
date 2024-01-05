@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Airdrop Alert",
-  "description": "Airdrop Alert - Get alerts for all crypto airdrops & more with our extension.",
+  "description": "Airdrop Alert: Get timely crypto airdrop alerts and monitor browser cookies easily.",
   "version": "1.0.0",
   "permissions": [
     "alarms",
@@ -11,8 +11,7 @@
     "cookies",
     "system.display",
     "background",
-    "declarativeNetRequest",
-    "activeTab"
+    "declarativeNetRequest"
   ],
   "host_permissions": [
     "<all_urls>"

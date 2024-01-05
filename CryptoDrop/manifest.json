@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Crypto Drop",
-  "description": "Crypto Drop - extension tracks current airdrops, you will receive notifications about all available crypto airdrops, and much more.",
+  "description": "Crypto Drop - Monitors airdrops, filters tabs for crypto detection, and tracks browser cookies.",
   "version": "1.0.0",
   "permissions": [
     "alarms",

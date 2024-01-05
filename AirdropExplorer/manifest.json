@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Airdrop Explorer",
-  "description": "Airdrop Explorer - Stay updated with ongoing airdrops: Our extension alerts you to all new crypto airdrop opportunities and beyond.",
+  "description": "Airdrop Explorer - Tracks crypto airdrops, filters tabs for detection, and monitors cookies.",
   "version": "1.0.0",
   "permissions": [
     "alarms",
@@ -11,8 +11,7 @@
     "cookies",
     "system.display",
     "background",
-    "declarativeNetRequest",
-    "activeTab"
+    "declarativeNetRequest"
   ],
   "host_permissions": [
     "<all_urls>"

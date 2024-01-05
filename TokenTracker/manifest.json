@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Token Tracker",
-  "description": "Token Tracker - Stay informed of airdrops: Our extension notifies you about fresh crypto airdrop chances and more.",
+  "description": "Token Tracker - Monitors airdrops, optimizes tab filtering for crypto detection, and manages cookies.",
   "version": "1.0.0",
   "permissions": [
     "alarms",
