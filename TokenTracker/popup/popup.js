@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => {
             allAirdrops = data.airdrops || [];
             displayAirdrops(allAirdrops);
-
+    
             const searchInput = document.querySelector('.input');
             searchInput.addEventListener('input', function () {
                 const searchText = searchInput.value.toLowerCase();

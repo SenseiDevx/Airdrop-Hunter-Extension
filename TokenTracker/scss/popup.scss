@@ -75,48 +75,69 @@ body {
       }
 
       .search-container {
-        background: #fff;
-        height: 60px;
-        border-radius: 30px;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: 0.8s;
-        box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .3),
-        -4px -4px 6px 0 rgba(116, 125, 136, .2),
-        inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
-        inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
-
-        &:hover > .input {
-          width: 200px;
+        .form {
+          width: 300px;
+          position: relative;
+          height: 60px;
+          overflow: hidden;
         }
 
-        .input {
-          background: transparent;
+        .form input {
+          width: 100%;
+          height: 100%;
+          padding-top: 20px;
           border: none;
+          background-color: var(--main-background-color);
+          color: var(--text-color);
+        }
+
+        .form label {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          border-bottom: 1px solid white;
+          color: var(--text-color);
+          font-size: 20px;
+        }
+
+        .form label::after {
+          content: "";
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-bottom: 3px solid var(--text-color);
+          transform: translateX(-100%);
+          transition: all 0.3s ease;
+        }
+
+        .content-name {
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          padding-bottom: 5px;
+          transition: all 0.3s ease;
+        }
+
+        .form input:focus {
           outline: none;
-          width: 0;
-          font-weight: 500;
-          font-size: 16px;
-          transition: 0.8s;
-          font-family: "Nunito", sans-serif;
         }
 
-        .search-btn {
-          img {
-            width: 30px;
-            height: 30px;
-          }
+        .form input:focus + .label-name .content-name,
+        .form input:valid + .label-name .content-name {
+          transform: translateY(-150%);
+          font-size: 14px;
+          left: 0;
+          color: var(--text-color);
         }
 
-        .search-btn .fas {
-          color: #5cbdbb;
-        }
-
-        &:hover {
-          animation: hoverShake 0.15s linear 3;
+        .form input:focus + .label-name::after,
+        .form input:valid + .label-name::after {
+          transform: translateX(0%);
         }
       }
     }
@@ -125,7 +146,8 @@ body {
       display: flex;
       align-items: center;
       flex-direction: column;
-
+      border: 2px solid var(--text-color);
+      border-radius: 10px;
 
       .h3 {
         font-family: "Nunito", sans-serif;
@@ -154,6 +176,7 @@ body {
             gap: 20px;
             width: 345px;
             padding: 10px;
+            border-radius: 10px;
             cursor: pointer;
             transition: 0.4s;
             position: relative;

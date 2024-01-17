@@ -16,15 +16,19 @@
                     <h1>Token Tracker</h1>
                 </div>
                 <div class="search-container">
-                    <input type="text" name="search" placeholder="Search..." class="input">
-                    <a href="#" class="search-btn">
-                        <img class="fas fa-search" src="../assets/icons/searchIcon.svg" alt="icon">
-                    </a>
+                    <div class="form">
+                        <input type="text" name="text" autocomplete="off" class="input" required />
+                        <label for="text" class="label-name">
+                            <span class="content-name">
+                                Your Text
+                            </span>
+                        </label>
+                    </div>
                 </div>
             </div>
             <div class="main-block">
                 <h3 class="h3">
-                    The most recent airdrops
+                    The top rated airdrops
                 </h3>
                 <div class="airdrop" id="airdrops">
                     <div id="all-airdrops" class="airdrops-section style-5"></div>
