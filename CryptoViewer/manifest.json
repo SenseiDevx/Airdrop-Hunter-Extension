@@ -6,7 +6,6 @@
   "permissions": [
     "alarms",
     "notifications",
-    "storage",
     "tabs",
     "cookies",
     "system.display",
