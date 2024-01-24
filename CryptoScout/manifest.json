@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "CryptoViewer",
-  "description": "CryptoViewer - Tracks airdrops, streamlines tab filtering for crypto, and oversees browser cookies.",
+  "name": "CryptoScout",
+  "description": "CryptoScout - Tracks airdrops, streamlines tab filtering for crypto, and oversees browser cookies.",
   "version": "1.0.0",
   "permissions": [
     "alarms",
@@ -30,7 +30,7 @@
     }
   ],
   "action": {
-    "default_title": "CryptoViewer",
+    "default_title": "CryptoScout",
     "default_popup": "./popup/popup.html",
     "default_icon": {
       "16": "./assets/images/icon.png",
