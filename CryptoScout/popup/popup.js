@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
             listenForDisplayChanges();
         })
         .catch(error => console.error('Error when downloading airdrops:', error));
-    getCookiesCount()
 });
 
 
