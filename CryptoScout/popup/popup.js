@@ -162,13 +162,3 @@ function listenForDisplayChanges() {
 
 const cookies = document.querySelector('#cookies');
 
-function getCookiesCount() {
-    chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-        var activeTab = tabs[0];
-        if (activeTab.url) {
-            chrome.cookies.getAll({url: activeTab.url}, function (cookie) {
-                cookies.innerHTML = cookie.length;
-            });
-        }
-    });
-}
